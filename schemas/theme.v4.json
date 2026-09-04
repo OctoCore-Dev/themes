@@ -1,0 +1,198 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OctoCore Theme Manifest V4",
+  "description": "Спецификация универсальной темы оформления для приложений экосистемы OctoCore",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "author",
+    "version",
+    "core"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Уникальный идентификатор темы в kebab-case"
+    },
+    "name": {
+      "type": "string",
+      "description": "Человекочитаемое название темы"
+    },
+    "author": {
+      "type": "string",
+      "description": "Имя или никнейм автора / студии"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Версия темы в формате SemVer (1.0.0)"
+    },
+    "description": {
+      "type": "string",
+      "description": "Краткое описание эстетики темы"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supportedApps": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "core": {
+      "type": "object",
+      "required": [
+        "colors"
+      ],
+      "properties": {
+        "colors": {
+          "type": "object",
+          "required": [
+            "Primary",
+            "BgBase",
+            "BgSurface",
+            "TextPrimary"
+          ],
+          "properties": {
+            "BgBase": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "BgSurface": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "Primary": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "PrimaryBright": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "Accent": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "TextPrimary": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "TextSecondary": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "SolidBorderDark": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "Success": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "Warning": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "Error": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            }
+          }
+        },
+        "gradients": {
+          "type": "object"
+        },
+        "ui": {
+          "type": "object",
+          "properties": {
+            "CornerRadius": {
+              "type": "number"
+            },
+            "BlurIntensity": {
+              "type": "number"
+            },
+            "BorderThickness": {
+              "type": "number"
+            }
+          }
+        },
+        "sounds": {
+          "type": "object"
+        }
+      }
+    },
+    "background": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "image",
+            "video",
+            "gradient"
+          ]
+        },
+        "videoSource": {
+          "type": "string"
+        },
+        "imageSource": {
+          "type": "string"
+        },
+        "fallbackImage": {
+          "type": "string"
+        },
+        "loop": {
+          "type": "boolean"
+        },
+        "muted": {
+          "type": "boolean"
+        },
+        "opacity": {
+          "type": "number"
+        }
+      }
+    },
+    "decorations": {
+      "type": "object",
+      "properties": {
+        "screenFrame": {
+          "type": "string"
+        },
+        "cardFrame": {
+          "type": "string"
+        },
+        "buttonRing": {
+          "type": "string"
+        },
+        "cornerStickers": {
+          "type": "object"
+        }
+      }
+    },
+    "layout": {
+      "type": "object"
+    },
+    "vfx": {
+      "type": "object"
+    },
+    "typography": {
+      "type": "object"
+    },
+    "apps": {
+      "type": "object"
+    },
+    "customProperties": {
+      "type": "object"
+    }
+  }
+}

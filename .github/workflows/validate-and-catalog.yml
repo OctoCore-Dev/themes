@@ -1,0 +1,39 @@
+name: Validate Themes & Build Catalog
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    name: 🎨 Validate Theme Packages & Build Catalog
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🌐 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 🔍 Validate Themes & Generate catalog.json
+        run: node scripts/build-catalog.js
+
+      - name: 🚀 Commit Updated catalog.json (Only on push to main)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config --global user.name "OctoBot"
+          git config --global user.email "bot@octocore.dev"
+          git add catalog.json
+          if git diff --staged --quiet; then
+            echo "No changes in catalog.json"
+          else
+            git commit -m "chore(catalog): auto-regenerate catalog.json [skip ci]"
+            git push origin main
+          fi

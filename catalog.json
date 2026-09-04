@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "4.0.0",
+  "generatedAt": "2026-09-04T09:27:05.457Z",
+  "totalThemes": 1,
+  "themes": [
+    {
+      "id": "sakura",
+      "name": "Sakura Blossom",
+      "author": "OctoCore",
+      "version": "1.0.0",
+      "description": "Ультра-живая тема: цветущее дерево сакуры, мягкое закатное небо, падающие лепестки, ветви дерева поверх экрана и нежный звук японского колокольчика ветра",
+      "tags": [
+        "anime",
+        "sakura",
+        "flowers",
+        "japanese",
+        "live",
+        "nature",
+        "pink"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/sakura/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/sakura/preview.jpg",
+      "primaryColor": "#FF94B8",
+      "backgroundColor": "#100912",
+      "accentColor": "#FF699E",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": false,
+        "hasFrames": true,
+        "hasIdolButton": false,
+        "hasParticles": true
+      },
+      "updatedAt": "2026-09-04T09:27:05.454Z"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "sakura",
+  "name": "Sakura Blossom",
+  "author": "OctoCore",
+  "version": "1.0.0",
+  "description": "Ультра-живая тема: цветущее дерево сакуры, мягкое закатное небо, падающие лепестки, ветви дерева поверх экрана и нежный звук японского колокольчика ветра",
+  "tags": [
+    "anime",
+    "sakura",
+    "flowers",
+    "japanese",
+    "live",
+    "nature",
+    "pink"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#100912",
+      "BgSurface": "#1E1220",
+      "Primary": "#FF94B8",
+      "PrimaryBright": "#FFB8D0",
+      "Accent": "#FF699E",
+      "TextPrimary": "#FFF0F5",
+      "TextSecondary": "#D8B4C8",
+      "SolidBorderDark": "#422038",
+      "Success": "#78D6A4",
+      "Warning": "#FAD02C",
+      "Error": "#FF6B6B"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 45,
+        "stops": [
+          "#FF94B8",
+          "#E65C92"
+        ]
+      },
+      "SurfaceGradient": {
+        "angle": 135,
+        "stops": [
+          "#261528",
+          "#120814"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 25,
+      "BorderThickness": 1.5
+    },
+    "sounds": {
+      "click": "assets/sounds/chime.wav",
+      "notification": "assets/sounds/chime.wav"
+    }
+  },
+  "background": {
+    "type": "image",
+    "imageSource": "assets/bg.jpg",
+    "opacity": 0.45
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/branches.png"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "sakura_petals",
+    "particleSprite": "assets/particles/petal.png",
+    "intensity": 0.8
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "glow_icon",
+        "borderGlow": "#FF94B8",
+        "pulseSpeed": 1.0
+      },
+      "sounds": {
+        "connect": "assets/sounds/chime.wav",
+        "disconnect": "assets/sounds/chime.wav"
+      }
+    },
+    "maps": {
+      "mapStyle": "sakura-night",
+      "tileUrlTemplate": "https://tiles.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
+      "markerAccent": "#FF94B8",
+      "routeColor": "#FF699E"
+    }
+  }
+}
