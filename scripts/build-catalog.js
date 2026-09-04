@@ -28,7 +28,44 @@ for (const folder of themeFolders) {
         const raw = fs.readFileSync(themeJsonPath, 'utf8');
         const theme = JSON.parse(raw);
 
-        // Validation
+        // 1. Content Moderation (NSFW & Toxicity Filter)
+        const nsfwKeywords = [
+            'porn', 'hentai', 'xxx', 'sex', 'nude', 'erotic', 'nsfw', '18+', 'adult', 
+            'dick', 'pussy', 'boobs', 'vagina', 'penis', 'порно', 'секс', 'хентай', 'сиськи', 'член'
+        ];
+        const textToCheck = `${theme.id} ${theme.name} ${theme.description || ''} ${(theme.tags || []).join(' ')}`.toLowerCase();
+        for (const word of nsfwKeywords) {
+            if (textToCheck.includes(word)) {
+                console.error(`❌ Security/Moderation Violation in ${folder}: Prohibited NSFW keyword "${word}" detected.`);
+                hasErrors = true;
+            }
+        }
+
+        // 2. Strict Security: Block executable or dangerous files (.exe, .dll, .apk, .js, .sh, etc.)
+        const allowedExtensions = ['.json', '.png', '.jpg', '.jpeg', '.webp', '.svg', '.mp4', '.webm', '.wav', '.mp3', '.ttf', '.otf'];
+        function scanFiles(dir) {
+            const files = fs.readdirSync(dir, { withFileTypes: true });
+            for (const f of files) {
+                const fullPath = path.join(dir, f.name);
+                if (f.isDirectory()) {
+                    scanFiles(fullPath);
+                } else {
+                    const ext = path.extname(f.name).toLowerCase();
+                    if (!allowedExtensions.includes(ext)) {
+                        console.error(`❌ Security Violation in ${folder}: Prohibited file extension "${ext}" (${f.name})!`);
+                        hasErrors = true;
+                    }
+                    const stat = fs.statSync(fullPath);
+                    if (stat.size > 15 * 1024 * 1024) {
+                        console.error(`❌ Size Violation in ${folder}: File ${f.name} exceeds 15 MB limit!`);
+                        hasErrors = true;
+                    }
+                }
+            }
+        }
+        scanFiles(path.join(themesDir, folder));
+
+        // 3. Schema & Required Fields Validation
         if (!theme.id || theme.id !== folder) {
             console.error(`❌ Error in ${folder}: theme.id ("${theme.id}") must match folder name ("${folder}")`);
             hasErrors = true;
