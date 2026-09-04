@@ -93,12 +93,29 @@ if (hasErrors) {
     process.exit(1);
 }
 
-const finalCatalog = {
-    schemaVersion: '4.0.0',
-    generatedAt: new Date().toISOString(),
-    totalThemes: catalog.length,
-    themes: catalog
-};
+let shouldWrite = true;
+let existingGeneratedAt = new Date().toISOString();
 
-fs.writeFileSync(catalogFile, JSON.stringify(finalCatalog, null, 2), 'utf8');
-console.log(`🎉 Successfully generated catalog.json with ${catalog.length} themes!`);
+if (fs.existsSync(catalogFile)) {
+    try {
+        const existing = JSON.parse(fs.readFileSync(catalogFile, 'utf8'));
+        existingGeneratedAt = existing.generatedAt || existingGeneratedAt;
+        if (JSON.stringify(existing.themes) === JSON.stringify(catalog)) {
+            shouldWrite = false;
+            console.log(`✨ catalog.json is already up to date (${catalog.length} themes).`);
+        }
+    } catch (e) {
+        // overwrite on parse error
+    }
+}
+
+if (shouldWrite) {
+    const finalCatalog = {
+        schemaVersion: '4.0.0',
+        generatedAt: new Date().toISOString(),
+        totalThemes: catalog.length,
+        themes: catalog
+    };
+    fs.writeFileSync(catalogFile, JSON.stringify(finalCatalog, null, 2), 'utf8');
+    console.log(`🎉 Successfully generated catalog.json with ${catalog.length} themes!`);
+}
