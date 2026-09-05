@@ -3,8 +3,8 @@
   "id": "sakura",
   "name": "Sakura Blossom",
   "author": "OctoCore",
-  "version": "1.0.0",
-  "description": "Ультра-живая тема: цветущее дерево сакуры, мягкое закатное небо, падающие лепестки, ветви дерева поверх экрана и нежный звук японского колокольчика ветра",
+  "version": "1.2.0",
+  "description": "Ультра-живая тема: цветущее дерево сакуры, мягкое закатное небо, падающие лепестки, переплетённые цветущие ветви в виде изящной квадратной рамки вокруг экрана, 4 состояния неоновой кнопки сакуры (бутон, вихрь лепестков, цветущая сакура, рубиновая ошибка) и нежный звук японского колокольчика ветра",
   "tags": [
     "anime",
     "sakura",
@@ -63,7 +63,11 @@
     "opacity": 0.45
   },
   "decorations": {
-    "screenFrame": "assets/frames/branches.png"
+    "screenFrame": "assets/frames/branches.png",
+    "buttonImageIdle": "assets/buttons/button_idle.png",
+    "buttonImageConnecting": "assets/buttons/button_connecting.png",
+    "buttonImageActive": "assets/buttons/button_active.png",
+    "buttonImageError": "assets/buttons/button_error.png"
   },
   "layout": {
     "buttonPosition": "center",
