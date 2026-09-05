@@ -45,3 +45,28 @@ jobs:
             git push origin main
           fi
 
+      - name: 🧹 Purge jsDelivr CDN Cache (Instant Client Updates)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          echo "Purging catalog.json from jsDelivr CDN..."
+          curl -X POST -s "https://purge.jsdelivr.net/gh/OctoCore-Dev/themes@main/catalog.json" || true
+          
+          echo "Purging themes manifests..."
+          for theme in themes/*/theme.json; do
+            if [ -f "$theme" ]; then
+              echo "Purging $theme..."
+              curl -X POST -s "https://purge.jsdelivr.net/gh/OctoCore-Dev/themes@main/$theme" || true
+            fi
+          done
+
+          echo "Purging git-modified assets..."
+          CHANGED_FILES=$(git diff --name-only HEAD~2 HEAD 2>/dev/null || git diff --name-only HEAD~1 HEAD 2>/dev/null || true)
+          for file in $CHANGED_FILES; do
+            if [ -f "$file" ]; then
+              echo "Purging $file..."
+              curl -X POST -s "https://purge.jsdelivr.net/gh/OctoCore-Dev/themes@main/$file" || true
+            fi
+          done
+          echo "✅ All jsDelivr caches purged successfully!"
+
+
