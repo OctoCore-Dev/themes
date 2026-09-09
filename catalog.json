@@ -1,13 +1,13 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-09-05T14:45:07.944Z",
+  "generatedAt": "2026-09-09T07:45:21.452Z",
   "totalThemes": 2,
   "themes": [
     {
       "id": "itachi",
       "name": "Itachi Uchiha",
       "author": "OctoCore",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "Легендарная неоново-черная аниме тема Итачи Учиха: кровавая луна, стая воронов с алым контуром чакры справа по контуру экрана, 4 состояния кнопки с эволюцией Шарингана (3 томоэ, вихрь чакры, Мангекё и черное пламя Аматерасу) и таинственный звук японского колокола",
       "tags": [
         "anime",
@@ -35,7 +35,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-05T14:45:07.938Z"
+      "updatedAt": "2026-09-09T07:45:21.406Z"
     },
     {
       "id": "sakura",
@@ -68,7 +68,7 @@
         "hasButtonVideo": false,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-05T14:45:07.944Z"
+      "updatedAt": "2026-09-09T07:45:21.452Z"
     }
   ]
 }
