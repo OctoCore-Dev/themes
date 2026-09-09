@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-09-09T07:45:21.452Z",
+  "generatedAt": "2026-09-09T07:46:11.687Z",
   "totalThemes": 2,
   "themes": [
     {
@@ -35,7 +35,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-09T07:45:21.406Z"
+      "updatedAt": "2026-09-09T07:46:11.682Z"
     },
     {
       "id": "sakura",
@@ -68,7 +68,7 @@
         "hasButtonVideo": false,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-09T07:45:21.452Z"
+      "updatedAt": "2026-09-09T07:46:11.687Z"
     }
   ]
 }
