@@ -270,14 +270,21 @@ for (const folder of themeFolders) {
             theme.background?.videoSource,
             theme.background?.fallbackImage,
             theme.decorations?.screenFrame,
+            theme.decorations?.screenFrameMobile,
             theme.decorations?.cardFrame,
             theme.decorations?.buttonImageIdle,
+            theme.decorations?.buttonImageConnecting,
             theme.decorations?.buttonImageActive,
+            theme.decorations?.buttonImageError,
             theme.decorations?.buttonVideoIdle,
+            theme.decorations?.buttonVideoConnecting,
             theme.decorations?.buttonVideoActive,
+            theme.decorations?.buttonVideoError,
             theme.vfx?.particleSprite,
             theme.core?.sounds?.connect,
+            theme.core?.sounds?.disconnect,
             theme.core?.sounds?.click,
+            theme.core?.sounds?.notification,
             theme.core?.ui?.fontFile
         ];
 
@@ -309,7 +316,7 @@ for (const folder of themeFolders) {
         // Feature flags
         const hasSounds = !!(theme.core?.sounds || theme.apps?.obxodka?.sounds);
         const hasVideo = theme.background?.type === 'video' || !!theme.background?.videoSource;
-        const hasFrames = !!(theme.decorations?.screenFrame || theme.decorations?.cardFrame || theme.decorations?.cornerStickers);
+        const hasFrames = !!(theme.decorations?.screenFrame || theme.decorations?.screenFrameMobile || theme.decorations?.cardFrame || theme.decorations?.cornerStickers);
         const hasIdolButton = !!(theme.decorations?.buttonImageIdle || theme.decorations?.buttonImageConnecting || theme.decorations?.buttonImageActive || theme.decorations?.buttonImageError || theme.apps?.obxodka?.tunnelButton?.style === 'custom_image');
         const hasButtonVideo = !!(theme.decorations?.buttonVideoIdle || theme.decorations?.buttonVideoConnecting || theme.decorations?.buttonVideoActive || theme.decorations?.buttonVideoError);
 

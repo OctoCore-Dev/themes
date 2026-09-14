@@ -5,6 +5,9 @@
 [![Validate Themes & Build Catalog](https://github.com/OctoCore-Dev/themes/actions/workflows/validate-and-catalog.yml/badge.svg)](https://github.com/OctoCore-Dev/themes/actions/workflows/validate-and-catalog.yml)
 [![Catalog](https://img.shields.io/badge/Catalog-v4.0.0-blueviolet)](catalog.json)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Wiki](https://img.shields.io/badge/Wiki-Full%20Guide-orange)](WIKI.md)
+
+> 📖 **[Полная документация и Вики по созданию тем (WIKI.md)](WIKI.md)** — подробное руководство по каждому параметру манифеста, настройке адаптивных 9-Slice рамок для смартфонов и ПК, 4-фазным анимированным кнопкам, видео и частицам VFX.
 
 ---
 

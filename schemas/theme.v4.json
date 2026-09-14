@@ -166,7 +166,34 @@
       "type": "object",
       "properties": {
         "screenFrame": {
-          "type": "string"
+          "type": "string",
+          "description": "Путь к полноэкранной рамке для ПК (Desktop)"
+        },
+        "screenFrameMobile": {
+          "type": "string",
+          "description": "Путь к вертикальной рамке экрана для смартфонов (Mobile)"
+        },
+        "frameSlice": {
+          "type": "object",
+          "description": "Параметры 9-Slice (Nine-Patch) срезов для десктопной или универсальной рамки",
+          "properties": {
+            "top": { "type": "integer", "minimum": 0 },
+            "right": { "type": "integer", "minimum": 0 },
+            "bottom": { "type": "integer", "minimum": 0 },
+            "left": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["top", "right", "bottom", "left"]
+        },
+        "frameSliceMobile": {
+          "type": "object",
+          "description": "Параметры 9-Slice срезов для мобильной рамки",
+          "properties": {
+            "top": { "type": "integer", "minimum": 0 },
+            "right": { "type": "integer", "minimum": 0 },
+            "bottom": { "type": "integer", "minimum": 0 },
+            "left": { "type": "integer", "minimum": 0 }
+          },
+          "required": ["top", "right", "bottom", "left"]
         },
         "cardFrame": {
           "type": "string"
