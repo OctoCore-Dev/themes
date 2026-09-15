@@ -1,0 +1,44 @@
+﻿name: 🐛 Сообщить об ошибке в теме (Bug Report)
+description: Сообщить о визуальном дефекте, артефакте рамки, сбое анимации или битом ассете
+title: "[Bug]: "
+labels: ["bug", "theme-defect"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Если тема некорректно отображается на вашем устройстве или в приложении Obxodka VPN, сообщите нам.
+  - type: input
+    id: theme_id
+    attributes:
+      label: ID или название темы
+      description: Укажите id темы (например, "itachi", "cyber-neon", "sakura").
+      placeholder: cyber-neon
+    validations:
+      required: true
+  - type: dropdown
+    id: device_type
+    attributes:
+      label: Тип устройства и платформа
+      options:
+        - Windows Desktop
+        - Android Smartphone
+        - Android Tablet
+        - iOS / iPadOS
+        - macOS
+        - Linux
+    validations:
+      required: true
+  - type: textarea
+    id: bug_description
+    attributes:
+      label: Описание проблемы
+      description: Что именно отображается неправильно? (Растяжение рамки, рывки видео, черный фон кнопки, отсутствие звука).
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты или запись экрана
+      description: Прикрепите скриншот дефекта.
+    validations:
+      required: false

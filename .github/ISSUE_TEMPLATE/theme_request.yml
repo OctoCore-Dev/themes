@@ -1,0 +1,32 @@
+﻿name: 🎨 Предложить новую тему (Theme Request)
+description: Предложите идею оформления для каталога OctoCore Themes
+title: "[Request]: "
+labels: ["theme-request", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за идею для каталога тем! Заполните форму ниже, чтобы дизайнеры сообщества могли воплотить вашу задумку.
+  - type: input
+    id: theme_name
+    attributes:
+      label: Название темы
+      description: Желаемое название оформления (например, "Cyber Sunset", "Retrowave 80s").
+      placeholder: Cyber Sunset
+    validations:
+      required: true
+  - type: textarea
+    id: theme_description
+    attributes:
+      label: Концепт и описание
+      description: Опишите визуальный стиль, настроение, цвета и особенности.
+      placeholder: Тёмная неоновая тема с фиолетовыми и золотыми акцентами, зацикленным видео заката на горизонте...
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Референсы и ссылки
+      description: Прикрепите ссылки на палитры, арты или примеры дизайна.
+    validations:
+      required: false

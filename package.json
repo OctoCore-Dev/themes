@@ -1,0 +1,34 @@
+﻿{
+  "name": "@octocore/themes",
+  "version": "4.0.0",
+  "description": "Official and community themes catalog for the OctoCore ecosystem (Obxodka VPN, Maps, and Apps)",
+  "homepage": "https://github.com/OctoCore-Dev/themes#readme",
+  "bugs": {
+    "url": "https://github.com/OctoCore-Dev/themes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OctoCore-Dev/themes.git"
+  },
+  "license": "MIT",
+  "author": "OctoCore Team <support@octocore.dev>",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "validate": "node scripts/build-catalog.js",
+    "build": "node scripts/build-catalog.js",
+    "test": "node scripts/build-catalog.js"
+  },
+  "keywords": [
+    "octocore",
+    "obxodka",
+    "vpn",
+    "themes",
+    "theme-catalog",
+    "customization",
+    "9-slice",
+    "animated-webp",
+    "skia"
+  ]
+}

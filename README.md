@@ -5,9 +5,13 @@
 [![Validate Themes & Build Catalog](https://github.com/OctoCore-Dev/themes/actions/workflows/validate-and-catalog.yml/badge.svg)](https://github.com/OctoCore-Dev/themes/actions/workflows/validate-and-catalog.yml)
 [![Catalog](https://img.shields.io/badge/Catalog-v4.0.0-blueviolet)](catalog.json)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Wiki](https://img.shields.io/badge/Wiki-Full%20Guide-orange)](WIKI.md)
+[![Wiki](https://img.shields.io/badge/Wiki-GitHub%20Wiki-orange)](https://github.com/OctoCore-Dev/themes/wiki)
+[![Contributing](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Security Policy](https://img.shields.io/badge/Security-Policy-blue.svg)](SECURITY.md)
 
-> 📖 **[Полная документация и Вики по созданию тем (WIKI.md)](WIKI.md)** — подробное руководство по каждому параметру манифеста, настройке адаптивных 9-Slice рамок для смартфонов и ПК, 4-фазным анимированным кнопкам, видео и частицам VFX.
+> 📖 **[Полная документация и Вики по созданию тем](https://github.com/OctoCore-Dev/themes/wiki)** — подробное интерактивное руководство по каждому параметру манифеста, 9-Slice рамкам, 4-фазным кнопкам, видео и частицам VFX.
+> 
+> 🛠️ **[Руководство для авторов (CONTRIBUTING.md)](CONTRIBUTING.md)** | 🛡️ **[Политика безопасности (SECURITY.md)](SECURITY.md)** | 🤝 **[Кодекс поведения (CODE_OF_CONDUCT.md)](CODE_OF_CONDUCT.md)** | 📦 **[Шаблон темы (Starter Template)](templates/starter-theme)**
 
 ---
 
@@ -127,15 +131,30 @@ ffmpeg -framerate 30 -i frame_%03d.png -vcodec libwebp -lossless 0 -q:v 80 -loop
 ## 🚀 Как создать и опубликовать свою тему
 
 1. **Форкните этот репозиторий**: `https://github.com/OctoCore-Dev/themes`
-2. **Создайте папку** в `themes/<your-theme-id>/` (только строчные буквы, цифры и дефис).
-3. **Создайте манифест `theme.json`** по спецификации [schemas/theme.v4.json](schemas/theme.v4.json).
-4. **Положите обложку `preview.png`** (рекомендуемый размер 600x400).
-5. **Положите ассеты** в подпапку `assets/` (видео, animated webp, рамки, звуки).
+2. **Скопируйте стартовый шаблон**:
+   ```bash
+   cp -r templates/starter-theme themes/my-awesome-theme
+   ```
+3. **Настройте манифест `theme.json`** по спецификации [schemas/theme.v4.json](schemas/theme.v4.json).
+4. **Замените иконку и превью**: `icon.png` (квадрат 512x512) и `preview.jpg` (16:9 1280x720).
+5. **Положите ассеты** в подпапку `assets/` (видео, animated webp кнопки, 9-slice рамку, звуки).
 6. **Проверьте локально**:
    ```bash
+   npm run validate
+   # или напрямую через Node:
    node scripts/build-catalog.js
    ```
 7. **Откройте Pull Request** в ветку `main`. GitHub Action автоматически всё проверит и добавит вашу тему в каталог!
+
+---
+
+## 📚 Дополнительные документы
+
+- 📖 [Официальная интерактивная Вики](https://github.com/OctoCore-Dev/themes/wiki)
+- 🛠️ [Руководство по участию и созданию тем (CONTRIBUTING.md)](CONTRIBUTING.md)
+- 🛡️ [Политика безопасности и модель угроз (SECURITY.md)](SECURITY.md)
+- 🤝 [Кодекс поведения участников (CODE_OF_CONDUCT.md)](CODE_OF_CONDUCT.md)
+- 📦 [Готовый шаблон новой темы (Starter Template)](templates/starter-theme)
 
 ---
 
@@ -146,4 +165,4 @@ ffmpeg -framerate 30 -i frame_%03d.png -vcodec libwebp -lossless 0 -q:v 80 -loop
 https://raw.githubusercontent.com/OctoCore-Dev/themes/main/catalog.json
 ```
 
-Лицензия: MIT. Создано с любовью сообществом OctoCore.
+Лицензия: [MIT](LICENSE). Создано с любовью сообществом OctoCore.

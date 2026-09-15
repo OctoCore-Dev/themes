@@ -1,0 +1,8 @@
+﻿blank_issues_enabled: false
+contact_links:
+  - name: 📖 Документация и Вики по темам
+    url: https://github.com/OctoCore-Dev/themes/wiki
+    about: Подробное руководство по созданию тем, схеме theme.json и 9-Slice рамкам.
+  - name: 💬 Чат и сообщество OctoCore
+    url: https://t.me/octocore_dev
+    about: Задайте вопрос разработчикам и дизайнерам сообщества.

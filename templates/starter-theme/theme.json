@@ -1,0 +1,97 @@
+﻿{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "starter-theme",
+  "name": "Starter Template",
+  "author": "Your Name",
+  "version": "1.0.0",
+  "description": "Базовый шаблон для создания авторских тем оформления OctoCore / Obxodka VPN",
+  "tags": [
+    "template",
+    "dark",
+    "starter",
+    "community"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#0D1117",
+      "BgSurface": "#161B22",
+      "BgElevated": "#21262D",
+      "BgInput": "#1C2128",
+      "Primary": "#58A6FF",
+      "PrimaryBright": "#79C0FF",
+      "PrimaryDim": "#1F6FEB",
+      "Accent": "#A371F7",
+      "TextPrimary": "#F0F6FC",
+      "TextSecondary": "#8B949E",
+      "TextMuted": "#484F58",
+      "SolidBorderDark": "#30363D",
+      "BorderSubtle": "#21262D",
+      "BorderMedium": "#30363D",
+      "Success": "#3FB950",
+      "Warning": "#D29922",
+      "Error": "#F85149"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 45,
+        "stops": [
+          "#58A6FF",
+          "#A371F7"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 20,
+      "BorderThickness": 1.0,
+      "CardOpacity": 0.85
+    },
+    "sounds": {
+      "click": "assets/sounds/click.wav",
+      "notification": "assets/sounds/click.wav"
+    }
+  },
+  "background": {
+    "type": "image",
+    "imageSource": "assets/bg.jpg",
+    "opacity": 0.40
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/screen_frame.png",
+    "frameSlice": {
+      "top": 60,
+      "right": 60,
+      "bottom": 60,
+      "left": 60
+    },
+    "buttonImageIdle": "assets/buttons/btn_idle.png",
+    "buttonImageConnecting": "assets/buttons/btn_connecting.png",
+    "buttonImageActive": "assets/buttons/btn_active.png",
+    "buttonImageError": "assets/buttons/btn_error.png"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "none"
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "glow_icon",
+        "borderGlow": "#58A6FF",
+        "pulseSpeed": 1.0
+      },
+      "sounds": {
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav"
+      }
+    }
+  }
+}
