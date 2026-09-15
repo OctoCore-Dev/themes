@@ -76,7 +76,10 @@
     "buttonImageConnecting": "assets/buttons/button_connecting.png",
     "buttonImageActive": "assets/buttons/button_active.png",
     "buttonImageError": "assets/buttons/button_error.png",
-    "buttonVideoActive": "assets/buttons/button_active.webp"
+    "buttonVideoIdle": "assets/buttons/button_idle.webp",
+    "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
+    "buttonVideoActive": "assets/buttons/button_active.webp",
+    "buttonVideoError": "assets/buttons/button_error.webp"
   },
   "layout": {
     "buttonPosition": "center",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-09-15T15:59:12.672Z",
+  "generatedAt": "2026-09-15T16:18:18.892Z",
   "totalThemes": 4,
   "themes": [
     {
@@ -28,13 +28,13 @@
       "accentColor": "#FF0055",
       "features": {
         "hasSounds": true,
-        "hasVideo": false,
+        "hasVideo": true,
         "hasFrames": true,
         "hasIdolButton": true,
-        "hasButtonVideo": false,
+        "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-15T15:59:12.664Z"
+      "updatedAt": "2026-09-15T16:18:18.877Z"
     },
     {
       "id": "itachi",
@@ -68,7 +68,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-15T15:59:12.670Z"
+      "updatedAt": "2026-09-15T16:18:18.884Z"
     },
     {
       "id": "nordic-frost",
@@ -96,13 +96,13 @@
       "accentColor": "#A5F3FC",
       "features": {
         "hasSounds": true,
-        "hasVideo": false,
+        "hasVideo": true,
         "hasFrames": true,
         "hasIdolButton": true,
-        "hasButtonVideo": false,
+        "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-15T15:59:12.671Z"
+      "updatedAt": "2026-09-15T16:18:18.887Z"
     },
     {
       "id": "sakura",
@@ -129,13 +129,13 @@
       "accentColor": "#FF699E",
       "features": {
         "hasSounds": true,
-        "hasVideo": false,
+        "hasVideo": true,
         "hasFrames": true,
         "hasIdolButton": true,
-        "hasButtonVideo": false,
+        "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-15T15:59:12.672Z"
+      "updatedAt": "2026-09-15T16:18:18.891Z"
     }
   ]
 }

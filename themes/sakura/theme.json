@@ -58,7 +58,8 @@
     }
   },
   "background": {
-    "type": "image",
+    "type": "video",
+    "videoSource": "assets/bg.mp4",
     "imageSource": "assets/bg.jpg",
     "opacity": 0.45
   },
@@ -73,7 +74,11 @@
     "buttonImageIdle": "assets/buttons/button_idle.png",
     "buttonImageConnecting": "assets/buttons/button_connecting.png",
     "buttonImageActive": "assets/buttons/button_active.png",
-    "buttonImageError": "assets/buttons/button_error.png"
+    "buttonImageError": "assets/buttons/button_error.png",
+    "buttonVideoIdle": "assets/buttons/button_idle.webp",
+    "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
+    "buttonVideoActive": "assets/buttons/button_active.webp",
+    "buttonVideoError": "assets/buttons/button_error.webp"
   },
   "layout": {
     "buttonPosition": "center",
