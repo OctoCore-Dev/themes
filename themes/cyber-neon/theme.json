@@ -1,0 +1,110 @@
+{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "cyber-neon",
+  "name": "Cyber Neon 2077",
+  "author": "OctoCore",
+  "version": "1.0.0",
+  "description": "Футуристическая неоновая тема: киберпанк-ночь, электро-бирюзовый и неоново-пурпурный контраст, светящееся ядро реактора и искры кибернетической энергии",
+  "tags": [
+    "cyberpunk",
+    "neon",
+    "synthwave",
+    "dark",
+    "cyan",
+    "magenta",
+    "live"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#0A0915",
+      "BgSurface": "#131126",
+      "BgElevated": "#1C1836",
+      "BgInput": "#18142E",
+      "Primary": "#00F0FF",
+      "PrimaryBright": "#5CFFFF",
+      "PrimaryDim": "#00A3B5",
+      "Accent": "#FF0055",
+      "TextPrimary": "#F0F4FF",
+      "TextSecondary": "#96A1C4",
+      "TextMuted": "#576182",
+      "SolidBorderDark": "#2A224D",
+      "BorderSubtle": "#1E1838",
+      "BorderMedium": "#392F66",
+      "Success": "#00FF9D",
+      "Warning": "#FFB800",
+      "Error": "#FF0055"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 45,
+        "stops": [
+          "#00F0FF",
+          "#FF0055"
+        ]
+      },
+      "SurfaceGradient": {
+        "angle": 135,
+        "stops": [
+          "#1C1636",
+          "#0D0A1C"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 25,
+      "BorderThickness": 1.5,
+      "CardOpacity": 0.85
+    },
+    "sounds": {
+      "click": "assets/sounds/click.wav",
+      "notification": "assets/sounds/click.wav"
+    }
+  },
+  "background": {
+    "type": "image",
+    "imageSource": "assets/bg.jpg",
+    "opacity": 0.45
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/cyber_frame.png",
+    "frameSlice": {
+      "top": 80,
+      "right": 80,
+      "bottom": 80,
+      "left": 80
+    },
+    "buttonImageIdle": "assets/buttons/btn_idle.png",
+    "buttonImageConnecting": "assets/buttons/btn_connecting.png",
+    "buttonImageActive": "assets/buttons/btn_active.png",
+    "buttonImageError": "assets/buttons/btn_error.png"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "neon_sparks",
+    "particleSprite": "assets/particles/cyber_spark.png",
+    "intensity": 0.75,
+    "speed": 1.2
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "glow_icon",
+        "borderGlow": "#00F0FF",
+        "pulseSpeed": 1.2
+      },
+      "sounds": {
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav"
+      }
+    }
+  }
+}

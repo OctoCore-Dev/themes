@@ -66,6 +66,12 @@
   },
   "decorations": {
     "screenFrame": "assets/frames/crows.png",
+    "frameSlice": {
+      "top": 80,
+      "right": 140,
+      "bottom": 80,
+      "left": 80
+    },
     "buttonImageIdle": "assets/buttons/button_idle.png",
     "buttonImageConnecting": "assets/buttons/button_connecting.png",
     "buttonImageActive": "assets/buttons/button_active.png",

@@ -1,8 +1,41 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-09-14T19:42:06.474Z",
-  "totalThemes": 2,
+  "generatedAt": "2026-09-15T15:58:27.043Z",
+  "totalThemes": 4,
   "themes": [
+    {
+      "id": "cyber-neon",
+      "name": "Cyber Neon 2077",
+      "author": "OctoCore",
+      "version": "1.0.0",
+      "description": "Футуристическая неоновая тема: киберпанк-ночь, электро-бирюзовый и неоново-пурпурный контраст, светящееся ядро реактора и искры кибернетической энергии",
+      "tags": [
+        "cyberpunk",
+        "neon",
+        "synthwave",
+        "dark",
+        "cyan",
+        "magenta",
+        "live"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/cyber-neon/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/cyber-neon/preview.jpg",
+      "primaryColor": "#00F0FF",
+      "backgroundColor": "#0A0915",
+      "accentColor": "#FF0055",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": false,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": false,
+        "hasParticles": true
+      },
+      "updatedAt": "2026-09-15T15:58:27.029Z"
+    },
     {
       "id": "itachi",
       "name": "Itachi Uchiha",
@@ -35,7 +68,41 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-14T19:42:06.468Z"
+      "updatedAt": "2026-09-15T15:58:27.038Z"
+    },
+    {
+      "id": "nordic-frost",
+      "name": "Nordic Frost",
+      "author": "OctoCore",
+      "version": "1.0.0",
+      "description": "Элегантная северная тема: арктическая ночь, лазурный и ледниковый контраст, падающие кристаллы снега, матовое стекло и звон хрустального колокольчика",
+      "tags": [
+        "nordic",
+        "frost",
+        "ice",
+        "minimal",
+        "clean",
+        "cold",
+        "blue",
+        "winter"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/nordic-frost/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/nordic-frost/preview.jpg",
+      "primaryColor": "#38BDF8",
+      "backgroundColor": "#0B1118",
+      "accentColor": "#A5F3FC",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": false,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": false,
+        "hasParticles": true
+      },
+      "updatedAt": "2026-09-15T15:58:27.040Z"
     },
     {
       "id": "sakura",
@@ -68,7 +135,7 @@
         "hasButtonVideo": false,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-14T19:42:06.474Z"
+      "updatedAt": "2026-09-15T15:58:27.043Z"
     }
   ]
 }
