@@ -3,8 +3,8 @@
   "id": "russia",
   "name": "Великая Россия",
   "author": "OctoCore",
-  "version": "2.0.0",
-  "description": "Величественная отечественная тема: ночная Красная площадь и Московский Кремль в праздничной золотой подсветке, парящий триколор, золотой двуглавый орёл, 4 фазы кнопки со сменой состояний щита и триколора, узорная 9-Slice рамка с русской золотой вязью, частицы золотых искр и торжественный перезвон кремлёвских курантов",
+  "version": "2.1.0",
+  "description": "Величественная отечественная тема: ночная Красная площадь и Московский Кремль в праздничной золотой подсветке, парящий триколор, золотой двуглавый орёл, градиентные карточки в благородных цветах триколора (белый отблеск, царский сапфир и рубиновый бархат), богатая 9-Slice рамка с русской золотой вязью и лентой триколора, золотые угловые стикеры филиграни, 4 фазы кнопки со сменой состояний щита и частицы золотых кремлёвских звёзд",
   "tags": [
     "russia",
     "tricolor",
@@ -12,7 +12,8 @@
     "gold",
     "patriotic",
     "live",
-    "national"
+    "national",
+    "official"
   ],
   "supportedApps": [
     "*"
@@ -20,37 +21,38 @@
   "core": {
     "colors": {
       "BgBase": "#0B1017",
-      "BgSurface": "#141B26",
-      "BgElevated": "#1C2636",
-      "BgInput": "#172230",
+      "BgSurface": "#121926",
+      "BgElevated": "#1B2538",
+      "BgInput": "#101622",
       "Primary": "#D90429",
       "PrimaryBright": "#FF2E54",
       "PrimaryDim": "#99031D",
       "Accent": "#FFD700",
       "TextPrimary": "#FFFFFF",
-      "TextSecondary": "#C8D6E5",
+      "TextSecondary": "#D8E2ED",
       "TextMuted": "#7D8DA1",
-      "SolidBorderDark": "#2B3D54",
-      "BorderSubtle": "#1F2D3E",
-      "BorderMedium": "#415A7D",
+      "SolidBorderDark": "#2A3A54",
+      "BorderSubtle": "#1F2E45",
+      "BorderMedium": "#D4AF37",
       "Success": "#10B981",
       "Warning": "#FFB703",
       "Error": "#D90429"
     },
     "gradients": {
       "PrimaryGradient": {
-        "angle": 45,
+        "angle": 90,
         "stops": [
           "#FFFFFF",
-          "#0078D4",
-          "#D90429"
+          "#0039A6",
+          "#D52B1E"
         ]
       },
       "SurfaceGradient": {
         "angle": 135,
         "stops": [
-          "#1B2638",
-          "#0E1520"
+          "#253654",
+          "#122344",
+          "#381324"
         ]
       }
     },
@@ -58,11 +60,13 @@
       "CornerRadius": 16,
       "BlurIntensity": 25,
       "BorderThickness": 1.5,
-      "CardOpacity": 0.85
+      "CardOpacity": 0.88
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/click.wav"
+      "notification": "assets/sounds/click.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav"
     }
   },
   "background": {
@@ -73,11 +77,18 @@
   },
   "decorations": {
     "screenFrame": "assets/frames/russia_frame.png",
+    "cardFrame": "assets/frames/card_frame.png",
     "frameSlice": {
-      "top": 80,
-      "right": 80,
-      "bottom": 80,
-      "left": 80
+      "top": 130,
+      "right": 130,
+      "bottom": 130,
+      "left": 130
+    },
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
     },
     "buttonImageIdle": "assets/buttons/button_idle.png",
     "buttonImageConnecting": "assets/buttons/button_connecting.png",
@@ -99,15 +110,13 @@
     "particleSprite": "assets/particles/gold_star.png",
     "intensity": 0.65,
     "speed": 0.9,
-    "size": 1.0,
+    "size": 1.2,
     "color": "#FFD700"
   },
   "apps": {
     "obxodka": {
       "tunnelButton": {
-        "style": "glow_icon",
-        "borderGlow": "#FFD700",
-        "pulseSpeed": 1.0
+        "style": "custom_image"
       },
       "sounds": {
         "connect": "assets/sounds/connect.wav",
