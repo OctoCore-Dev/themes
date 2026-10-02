@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-10-02T08:05:05.891Z",
+  "generatedAt": "2026-10-02T08:07:31.012Z",
   "totalThemes": 6,
   "themes": [
     {
@@ -34,7 +34,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T08:05:05.878Z"
+      "updatedAt": "2026-10-02T08:07:30.959Z"
     },
     {
       "id": "itachi",
@@ -68,7 +68,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T08:05:05.885Z"
+      "updatedAt": "2026-10-02T08:07:30.975Z"
     },
     {
       "id": "nordic-frost",
@@ -102,19 +102,19 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T08:05:05.886Z"
+      "updatedAt": "2026-10-02T08:07:30.983Z"
     },
     {
       "id": "russia",
       "name": "Великая Россия",
       "author": "OctoCore",
-      "version": "2.1.0",
-      "description": "Величественная отечественная тема: ночная Красная площадь и Московский Кремль в праздничной золотой подсветке, парящий триколор, золотой двуглавый орёл, градиентные карточки в благородных цветах триколора (белый отблеск, царский сапфир и рубиновый бархат), богатая 9-Slice рамка с русской золотой вязью и лентой триколора, золотые угловые стикеры филиграни, 4 фазы кнопки со сменой состояний щита и частицы золотых кремлёвских звёзд",
+      "version": "3.0.0",
+      "description": "Величественная отечественная тема в парадной красно-золотой гамме Московского Кремля: ночная Красная площадь в праздничном золотом сиянии, парящий флаг и золотой двуглавый орёл, градиентные карточки в царском рубиновом бархате с золотыми контурами, роскошная 9-Slice рамка с русской вязью, золотые угловые стикеры филиграни, 4 фазы кнопки со сменой состояний щита и частицы золотых кремлёвских звёзд",
       "tags": [
         "russia",
-        "tricolor",
         "kremlin",
         "gold",
+        "ruby",
         "patriotic",
         "live",
         "national",
@@ -126,7 +126,7 @@
       "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/russia/icon.png",
       "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/russia/preview.jpg",
       "primaryColor": "#D90429",
-      "backgroundColor": "#0B1017",
+      "backgroundColor": "#0E080C",
       "accentColor": "#FFD700",
       "features": {
         "hasSounds": true,
@@ -136,7 +136,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T08:05:05.888Z"
+      "updatedAt": "2026-10-02T08:07:30.990Z"
     },
     {
       "id": "russian-winter",
@@ -171,7 +171,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T08:05:05.889Z"
+      "updatedAt": "2026-10-02T08:07:31.004Z"
     },
     {
       "id": "sakura",
@@ -204,7 +204,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T08:05:05.890Z"
+      "updatedAt": "2026-10-02T08:07:31.012Z"
     }
   ]
 }
