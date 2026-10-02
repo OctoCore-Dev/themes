@@ -1,0 +1,120 @@
+{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "russian-winter",
+  "name": "Русская Зима",
+  "author": "OctoCore",
+  "version": "2.0.0",
+  "description": "Сказочная отечественная тема русской зимы: хрустальная морозная ночь, заснеженный русский бор и иней, серебристо-лазурная морозная палитра, 9-Slice рамка с морозными узорами на стекле, 4 фазы кнопки с ледяным кристаллом и метелью, падающие снежинки и звон морозных колокольчиков тройки",
+  "tags": [
+    "winter",
+    "russia",
+    "snow",
+    "frost",
+    "ice",
+    "nature",
+    "blue",
+    "clean",
+    "live"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#09111E",
+      "BgSurface": "#101C2E",
+      "BgElevated": "#182840",
+      "BgInput": "#142236",
+      "Primary": "#00B4D8",
+      "PrimaryBright": "#90E0EF",
+      "PrimaryDim": "#0077B6",
+      "Accent": "#E0F7FA",
+      "TextPrimary": "#F0F8FF",
+      "TextSecondary": "#A8C5DA",
+      "TextMuted": "#688299",
+      "SolidBorderDark": "#1F3752",
+      "BorderSubtle": "#162B42",
+      "BorderMedium": "#2C4D73",
+      "Success": "#06D6A0",
+      "Warning": "#FFD166",
+      "Error": "#EF476F"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 45,
+        "stops": [
+          "#00B4D8",
+          "#CAF0F8",
+          "#48CAE4"
+        ]
+      },
+      "SurfaceGradient": {
+        "angle": 135,
+        "stops": [
+          "#152438",
+          "#0B1524"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 28,
+      "BorderThickness": 1.2,
+      "CardOpacity": 0.8
+    },
+    "sounds": {
+      "click": "assets/sounds/click.wav",
+      "notification": "assets/sounds/click.wav"
+    }
+  },
+  "background": {
+    "type": "image",
+    "imageSource": "assets/bg.jpg",
+    "fallbackImage": "assets/bg.jpg",
+    "opacity": 0.45
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/winter_frame.png",
+    "frameSlice": {
+      "top": 80,
+      "right": 80,
+      "bottom": 80,
+      "left": 80
+    },
+    "buttonImageIdle": "assets/buttons/button_idle.png",
+    "buttonImageConnecting": "assets/buttons/button_connecting.png",
+    "buttonImageActive": "assets/buttons/button_active.png",
+    "buttonImageError": "assets/buttons/button_error.png",
+    "buttonVideoIdle": "assets/buttons/button_idle.webp",
+    "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
+    "buttonVideoActive": "assets/buttons/button_active.webp",
+    "buttonVideoError": "assets/buttons/button_error.webp"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "snow",
+    "particleSprite": "assets/particles/snowflake.png",
+    "intensity": 0.7,
+    "speed": 0.8,
+    "size": 1.1,
+    "color": "#E0F7FA"
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "glow_icon",
+        "borderGlow": "#00B4D8",
+        "pulseSpeed": 1.0
+      },
+      "sounds": {
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav"
+      }
+    }
+  }
+}

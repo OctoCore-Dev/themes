@@ -1,7 +1,7 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-09-15T18:06:31.225Z",
-  "totalThemes": 4,
+  "generatedAt": "2026-10-02T07:40:24.389Z",
+  "totalThemes": 6,
   "themes": [
     {
       "id": "cyber-neon",
@@ -34,7 +34,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-15T18:06:31.215Z"
+      "updatedAt": "2026-10-02T07:40:24.355Z"
     },
     {
       "id": "itachi",
@@ -68,7 +68,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-15T18:06:31.222Z"
+      "updatedAt": "2026-10-02T07:40:24.366Z"
     },
     {
       "id": "nordic-frost",
@@ -102,7 +102,75 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-15T18:06:31.223Z"
+      "updatedAt": "2026-10-02T07:40:24.373Z"
+    },
+    {
+      "id": "russia",
+      "name": "Великая Россия",
+      "author": "OctoCore",
+      "version": "2.0.0",
+      "description": "Величественная отечественная тема: ночная Красная площадь и Московский Кремль в праздничной золотой подсветке, парящий триколор, золотой двуглавый орёл, 4 фазы кнопки со сменой состояний щита и триколора, узорная 9-Slice рамка с русской золотой вязью, частицы золотых искр и торжественный перезвон кремлёвских курантов",
+      "tags": [
+        "russia",
+        "tricolor",
+        "kremlin",
+        "gold",
+        "patriotic",
+        "live",
+        "national"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/russia/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/russia/preview.jpg",
+      "primaryColor": "#D90429",
+      "backgroundColor": "#0B1017",
+      "accentColor": "#FFD700",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": false,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": true,
+        "hasParticles": true
+      },
+      "updatedAt": "2026-10-02T07:40:24.377Z"
+    },
+    {
+      "id": "russian-winter",
+      "name": "Русская Зима",
+      "author": "OctoCore",
+      "version": "2.0.0",
+      "description": "Сказочная отечественная тема русской зимы: хрустальная морозная ночь, заснеженный русский бор и иней, серебристо-лазурная морозная палитра, 9-Slice рамка с морозными узорами на стекле, 4 фазы кнопки с ледяным кристаллом и метелью, падающие снежинки и звон морозных колокольчиков тройки",
+      "tags": [
+        "winter",
+        "russia",
+        "snow",
+        "frost",
+        "ice",
+        "nature",
+        "blue",
+        "clean",
+        "live"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/russian-winter/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/russian-winter/preview.jpg",
+      "primaryColor": "#00B4D8",
+      "backgroundColor": "#09111E",
+      "accentColor": "#E0F7FA",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": false,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": true,
+        "hasParticles": true
+      },
+      "updatedAt": "2026-10-02T07:40:24.382Z"
     },
     {
       "id": "sakura",
@@ -135,7 +203,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-09-15T18:06:31.224Z"
+      "updatedAt": "2026-10-02T07:40:24.389Z"
     }
   ]
 }

@@ -24,7 +24,7 @@
 - В приложении используется строгий AOT-десериализатор `System.Text.Json` (`ThemeJsonContext`) с отключенным полиморфным созданием произвольных типов.
 
 ### 2. Защита от Path Traversal и Zip Slip
-- Все пути внутри архивов и манифестов проверяются валидатором [`SafeThemeExtractor`](file:///c:/Users/irovb/Documents/code/obxodka/obxodka.Shared/Themes/SafeThemeExtractor.cs) и CI-скриптом [`build-catalog.js`](file:///c:/Users/irovb/Documents/code/themes/scripts/build-catalog.js).
+- Все пути внутри архивов и манифестов проверяются валидатором [`SafeThemeExtractor`](file:///c:/Users/irovb/code/obxodka/obxodka.Shared/Themes/SafeThemeExtractor.cs) и CI-скриптом [`build-catalog.js`](file:///c:/Users/irovb/code/themes/scripts/build-catalog.js).
 - Любые попытки выхода за пределы папки темы (использование `../`, абсолютных путей `C:\`, `/etc/`, или URL со схемами `file://`, `javascript:`) жестко блокируются.
 
 ### 3. Проверка магических сигнатур (Magic Bytes Verification)
