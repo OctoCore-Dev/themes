@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-10-02T07:48:24.863Z",
+  "generatedAt": "2026-10-02T07:54:47.143Z",
   "totalThemes": 6,
   "themes": [
     {
@@ -34,7 +34,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T07:48:24.851Z"
+      "updatedAt": "2026-10-02T07:54:47.098Z"
     },
     {
       "id": "itachi",
@@ -68,7 +68,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T07:48:24.857Z"
+      "updatedAt": "2026-10-02T07:54:47.111Z"
     },
     {
       "id": "nordic-frost",
@@ -102,32 +102,31 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T07:48:24.859Z"
+      "updatedAt": "2026-10-02T07:54:47.120Z"
     },
     {
       "id": "russia",
-      "name": "Современная Россия",
+      "name": "Великая Россия",
       "author": "OctoCore",
-      "version": "2.1.0",
-      "description": "Ультрасовременная отечественная тема: ночная панорама столицы и небоскрёбов Москва-Сити, рубиновая кремлёвская звезда, 4 состояния кнопки с неоновым триколором, лаконичная 9-Slice рамка триколора, рубиновые частицы и перезвон курантов Спасской башни",
+      "version": "2.0.0",
+      "description": "Величественная отечественная тема: ночная Красная площадь и Московский Кремль в праздничной золотой подсветке, парящий триколор, золотой двуглавый орёл, 4 фазы кнопки со сменой состояний щита и триколора, узорная 9-Slice рамка с русской золотой вязью, частицы золотых искр и торжественный перезвон кремлёвских курантов",
       "tags": [
         "russia",
-        "modern",
         "tricolor",
-        "moscow",
         "kremlin",
-        "ruby",
-        "star",
-        "live"
+        "gold",
+        "patriotic",
+        "live",
+        "national"
       ],
       "supportedApps": [
         "*"
       ],
       "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/russia/icon.png",
       "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/russia/preview.jpg",
-      "primaryColor": "#0066FF",
-      "backgroundColor": "#070A0F",
-      "accentColor": "#E0115F",
+      "primaryColor": "#D90429",
+      "backgroundColor": "#0B1017",
+      "accentColor": "#FFD700",
       "features": {
         "hasSounds": true,
         "hasVideo": false,
@@ -136,7 +135,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T07:48:24.860Z"
+      "updatedAt": "2026-10-02T07:54:47.124Z"
     },
     {
       "id": "russian-winter",
@@ -171,7 +170,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T07:48:24.861Z"
+      "updatedAt": "2026-10-02T07:54:47.136Z"
     },
     {
       "id": "sakura",
@@ -204,7 +203,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-02T07:48:24.862Z"
+      "updatedAt": "2026-10-02T07:54:47.143Z"
     }
   ]
 }
