@@ -3,8 +3,8 @@
   "id": "halloween-2026",
   "name": "Halloween 2026",
   "author": "OctoCore",
-  "version": "1.0.0",
-  "description": "Зловещая мистическая тема к Хэллоуину 2026: мрачный викторианский замок в свете кровавой луны, парящие летучие мыши, зловещие тыквы Джека с пылающим взором, градиентные обсидианово-фиолетовые карточки с тыквенно-оранжевым свечением, 9-Slice рамка с колючим терновником и паутиной, анимированная 4-фазная кнопка и леденящие душу хэллоуинские звуки",
+  "version": "1.0.1",
+  "description": "Ультимативная мистическая тема к Хэллоуину 2026: живой видео-фон с клубящимся туманом над готическим замком и мерцанием тыкв, расправляющиеся крылья летучей мыши и пентаграмма призыва на кнопке VPN, кастомный готический хоррор-шрифт Creepster, обсидианово-фиолетовые карточки с тыквенным неоном, адаптивная 9-Slice рамка для ПК и смартфонов, парящие блуждающие огни (Will-o'-the-Wisp) и кинематографичный саундпак с раскатами грома, колокольным набатом и хохотом ведьмы",
   "tags": [
     "halloween",
     "spooky",
@@ -12,6 +12,8 @@
     "dark",
     "horror",
     "gothic",
+    "video",
+    "live",
     "vfx",
     "official"
   ],
@@ -58,9 +60,11 @@
     },
     "ui": {
       "CornerRadius": 16,
-      "BlurIntensity": 25,
+      "BlurIntensity": 28,
       "BorderThickness": 1.5,
-      "CardOpacity": 0.88
+      "CardOpacity": 0.82,
+      "FontFile": "assets/fonts/halloween.ttf",
+      "FontTitle": "Creepster"
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
@@ -70,19 +74,29 @@
     }
   },
   "background": {
-    "type": "image",
+    "type": "video",
+    "videoSource": "assets/bg.mp4",
     "imageSource": "assets/bg.jpg",
     "fallbackImage": "assets/bg.jpg",
+    "loop": true,
+    "muted": true,
     "opacity": 0.45
   },
   "decorations": {
     "screenFrame": "assets/frames/halloween_frame.png",
+    "screenFrameMobile": "assets/frames/halloween_frame_mobile.png",
     "cardFrame": "assets/frames/card_frame.png",
     "frameSlice": {
       "top": 140,
       "right": 140,
       "bottom": 140,
       "left": 140
+    },
+    "frameSliceMobile": {
+      "top": 140,
+      "right": 80,
+      "bottom": 140,
+      "left": 80
     },
     "cornerStickers": {
       "topLeft": "assets/stickers/corner_tl.png",
@@ -107,11 +121,11 @@
   },
   "vfx": {
     "particles": "custom",
-    "particleSprite": "assets/particles/bat.png",
-    "intensity": 0.7,
+    "particleSprite": "assets/particles/wisp.png",
+    "intensity": 0.75,
     "speed": 1.1,
     "size": 1.2,
-    "color": "#FF7518"
+    "color": "#39FF14"
   },
   "apps": {
     "obxodka": {
