@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-10-16T12:54:02.362Z",
+  "generatedAt": "2026-10-16T12:54:20.377Z",
   "totalThemes": 7,
   "themes": [
     {
@@ -34,7 +34,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:02.304Z"
+      "updatedAt": "2026-10-16T12:54:20.366Z"
     },
     {
       "id": "halloween-2026",
@@ -70,7 +70,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:02.313Z"
+      "updatedAt": "2026-10-16T12:54:20.372Z"
     },
     {
       "id": "itachi",
@@ -104,7 +104,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:02.322Z"
+      "updatedAt": "2026-10-16T12:54:20.373Z"
     },
     {
       "id": "nordic-frost",
@@ -138,7 +138,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:02.330Z"
+      "updatedAt": "2026-10-16T12:54:20.375Z"
     },
     {
       "id": "russia",
@@ -172,7 +172,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:02.343Z"
+      "updatedAt": "2026-10-16T12:54:20.376Z"
     },
     {
       "id": "russian-winter",
@@ -207,7 +207,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:02.353Z"
+      "updatedAt": "2026-10-16T12:54:20.376Z"
     },
     {
       "id": "sakura",
@@ -240,7 +240,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:02.361Z"
+      "updatedAt": "2026-10-16T12:54:20.377Z"
     }
   ]
 }
