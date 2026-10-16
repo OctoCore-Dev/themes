@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-10-16T12:54:20.377Z",
+  "generatedAt": "2026-10-16T13:03:21.731Z",
   "totalThemes": 7,
   "themes": [
     {
@@ -34,13 +34,13 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:20.366Z"
+      "updatedAt": "2026-10-16T13:03:21.676Z"
     },
     {
       "id": "halloween-2026",
       "name": "Halloween 2026",
       "author": "OctoCore",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "Ультимативная мистическая тема к Хэллоуину 2026: живой видео-фон с клубящимся туманом над готическим замком и мерцанием тыкв, расправляющиеся крылья летучей мыши и пентаграмма призыва на кнопке VPN, кастомный готический хоррор-шрифт Creepster, обсидианово-фиолетовые карточки с тыквенным неоном, адаптивная 9-Slice рамка для ПК и смартфонов, парящие блуждающие огни (Will-o'-the-Wisp) и кинематографичный саундпак с раскатами грома, колокольным набатом и хохотом ведьмы",
       "tags": [
         "halloween",
@@ -70,7 +70,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:20.372Z"
+      "updatedAt": "2026-10-16T13:03:21.684Z"
     },
     {
       "id": "itachi",
@@ -104,7 +104,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:20.373Z"
+      "updatedAt": "2026-10-16T13:03:21.693Z"
     },
     {
       "id": "nordic-frost",
@@ -138,7 +138,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:20.375Z"
+      "updatedAt": "2026-10-16T13:03:21.701Z"
     },
     {
       "id": "russia",
@@ -172,7 +172,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:20.376Z"
+      "updatedAt": "2026-10-16T13:03:21.713Z"
     },
     {
       "id": "russian-winter",
@@ -207,7 +207,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:20.376Z"
+      "updatedAt": "2026-10-16T13:03:21.724Z"
     },
     {
       "id": "sakura",
@@ -240,7 +240,7 @@
         "hasButtonVideo": true,
         "hasParticles": true
       },
-      "updatedAt": "2026-10-16T12:54:20.377Z"
+      "updatedAt": "2026-10-16T13:03:21.731Z"
     }
   ]
 }
