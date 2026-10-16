@@ -1,0 +1,127 @@
+{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "halloween-2026",
+  "name": "Halloween 2026",
+  "author": "OctoCore",
+  "version": "1.0.0",
+  "description": "Зловещая мистическая тема к Хэллоуину 2026: мрачный викторианский замок в свете кровавой луны, парящие летучие мыши, зловещие тыквы Джека с пылающим взором, градиентные обсидианово-фиолетовые карточки с тыквенно-оранжевым свечением, 9-Slice рамка с колючим терновником и паутиной, анимированная 4-фазная кнопка и леденящие душу хэллоуинские звуки",
+  "tags": [
+    "halloween",
+    "spooky",
+    "pumpkin",
+    "dark",
+    "horror",
+    "gothic",
+    "vfx",
+    "official"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#0B0612",
+      "BgSurface": "#150C1F",
+      "BgElevated": "#221232",
+      "BgInput": "#12091A",
+      "Primary": "#FF6B00",
+      "PrimaryBright": "#FFA020",
+      "PrimaryDim": "#A33E00",
+      "Accent": "#39FF14",
+      "TextPrimary": "#FFFFFF",
+      "TextSecondary": "#E0D0F5",
+      "TextMuted": "#8E7E9E",
+      "SolidBorderDark": "#201030",
+      "BorderSubtle": "#2D1942",
+      "BorderMedium": "#FF7518",
+      "Success": "#39FF14",
+      "Warning": "#FFB700",
+      "Error": "#FF1744"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 90,
+        "stops": [
+          "#FF9E00",
+          "#FF6B00",
+          "#D00000"
+        ]
+      },
+      "SurfaceGradient": {
+        "angle": 135,
+        "stops": [
+          "#2A133D",
+          "#150B21",
+          "#0B0512"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 25,
+      "BorderThickness": 1.5,
+      "CardOpacity": 0.88
+    },
+    "sounds": {
+      "click": "assets/sounds/click.wav",
+      "notification": "assets/sounds/notification.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav"
+    }
+  },
+  "background": {
+    "type": "image",
+    "imageSource": "assets/bg.jpg",
+    "fallbackImage": "assets/bg.jpg",
+    "opacity": 0.45
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/halloween_frame.png",
+    "cardFrame": "assets/frames/card_frame.png",
+    "frameSlice": {
+      "top": 140,
+      "right": 140,
+      "bottom": 140,
+      "left": 140
+    },
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
+    },
+    "buttonImageIdle": "assets/buttons/button_idle.png",
+    "buttonImageConnecting": "assets/buttons/button_connecting.png",
+    "buttonImageActive": "assets/buttons/button_active.png",
+    "buttonImageError": "assets/buttons/button_error.png",
+    "buttonVideoIdle": "assets/buttons/button_idle.webp",
+    "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
+    "buttonVideoActive": "assets/buttons/button_active.webp",
+    "buttonVideoError": "assets/buttons/button_error.webp"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "custom",
+    "particleSprite": "assets/particles/bat.png",
+    "intensity": 0.7,
+    "speed": 1.1,
+    "size": 1.2,
+    "color": "#FF7518"
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "custom_image"
+      },
+      "sounds": {
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav"
+      }
+    }
+  }
+}
