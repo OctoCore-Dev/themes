@@ -64,7 +64,9 @@
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/click.wav"
+      "notification": "assets/sounds/click.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav"
     }
   },
   "background": {
@@ -102,7 +104,27 @@
     "intensity": 0.7,
     "speed": 0.8,
     "size": 1.1,
-    "color": "#E0F7FA"
+    "color": "#E0F7FA",
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.35,
+    "screenOverlay": "frost_vignette",
+    "trafficGraphStyle": "aurora_ribbon",
+    "buttonLoaderStyle": "crystal",
+    "statusText": {
+      "disconnected": "НЕ В СЕТИ",
+      "connecting": "СНЕЖНЫЙ ВИХРЬ...",
+      "connected": "МОРОЗНАЯ ЗАЩИТА",
+      "error": "ОШИБКА СЕТИ",
+      "buttonIdle": "СТАРТ",
+      "buttonConnecting": "ПУРГА",
+      "buttonConnected": "В СЕТИ"
+    },
+    "activeOverrides": {
+      "accentColor": "#60A5FA",
+      "glowColor": "#93C5FD",
+      "particleSpeedMultiplier": 1.6
+    }
   },
   "apps": {
     "obxodka": {

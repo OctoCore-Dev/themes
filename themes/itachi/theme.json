@@ -22,12 +22,18 @@
     "colors": {
       "BgBase": "#0B080D",
       "BgSurface": "#16111B",
+      "BgElevated": "#211929",
+      "BgInput": "#120D17",
       "Primary": "#E61937",
       "PrimaryBright": "#FF3355",
+      "PrimaryDim": "#9E0E25",
       "Accent": "#FF1744",
       "TextPrimary": "#F5F5F7",
       "TextSecondary": "#A39DAE",
+      "TextMuted": "#6B6478",
       "SolidBorderDark": "#381622",
+      "BorderSubtle": "#29121B",
+      "BorderMedium": "#541E30",
       "Success": "#4EBA6F",
       "Warning": "#FFB703",
       "Error": "#FF0033"
@@ -51,11 +57,14 @@
     "ui": {
       "CornerRadius": 16,
       "BlurIntensity": 25,
-      "BorderThickness": 1.5
+      "BorderThickness": 1.5,
+      "CardOpacity": 0.85
     },
     "sounds": {
       "click": "assets/sounds/chime.wav",
-      "notification": "assets/sounds/chime.wav"
+      "notification": "assets/sounds/chime.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/chime.wav"
     }
   },
   "background": {
@@ -90,7 +99,28 @@
   "vfx": {
     "particles": "crows_feathers",
     "particleSprite": "assets/particles/feather.png",
-    "intensity": 0.7
+    "intensity": 0.7,
+    "speed": 1.1,
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.4,
+    "screenOverlay": "crimson_vignette",
+    "trafficGraphStyle": "pulse_line",
+    "buttonLoaderStyle": "reactor",
+    "statusText": {
+      "disconnected": "ШАРИНГАН СКРЫТ",
+      "connecting": "АКТИВАЦИЯ МАНГЕКЬЁ...",
+      "connected": "ЦУКУЁМИ АКТИВНО",
+      "error": "ЧАКРА ИСТОЩЕНА",
+      "buttonIdle": "ГЕНДЗЮЦУ",
+      "buttonConnecting": "ПЕЧАТЬ",
+      "buttonConnected": "АМАТЭРАСУ"
+    },
+    "activeOverrides": {
+      "accentColor": "#FF1E38",
+      "glowColor": "#E11D48",
+      "particleSpeedMultiplier": 1.7
+    }
   },
   "apps": {
     "obxodka": {

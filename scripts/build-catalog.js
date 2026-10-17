@@ -18,13 +18,14 @@ const catalog = [];
 let hasErrors = false;
 
 // ─── Security Limits & Whitelists ───────────────────────────────────────────
-const allowedExtensions = ['.json', '.png', '.jpg', '.jpeg', '.webp', '.mp4', '.webm', '.wav', '.mp3', '.ttf', '.otf'];
+const allowedExtensions = ['.json', '.png', '.jpg', '.jpeg', '.webp', '.mp4', '.webm', '.wav', '.mp3', '.ogg', '.ttf', '.otf'];
 
 const sizeLimits = {
     '.mp4': 20 * 1024 * 1024,
     '.webm': 20 * 1024 * 1024,
     '.wav': 5 * 1024 * 1024,
     '.mp3': 5 * 1024 * 1024,
+    '.ogg': 5 * 1024 * 1024,
     '.png': 5 * 1024 * 1024,
     '.jpg': 5 * 1024 * 1024,
     '.jpeg': 5 * 1024 * 1024,
@@ -35,6 +36,17 @@ const sizeLimits = {
 };
 
 const MAX_THEME_TOTAL_SIZE = 35 * 1024 * 1024; // 35 MB
+const MAX_PNG_DIMENSION = 4096;
+
+const POLYGLOT_SIGNATURES = [
+    '<!doctype html',
+    '<html',
+    '<script',
+    'javascript:',
+    'vbscript:',
+    '<?php',
+    'powershell'
+];
 
 function checkMagicBytes(filePath, ext, buffer) {
     if (!buffer || buffer.length === 0) {
@@ -67,15 +79,33 @@ function checkMagicBytes(filePath, ext, buffer) {
         return 'Blocked shortcut: Windows LNK file';
     }
 
-    // 2. Validate expected format signatures
+    // 2. Scan file content for embedded polyglot script payloads
+    const asciiLower = buffer.toString('latin1').toLowerCase();
+    for (const sig of POLYGLOT_SIGNATURES) {
+        if (asciiLower.includes(sig)) {
+            return `Blocked polyglot script payload signature: "${sig}"`;
+        }
+    }
+
+    // 3. Validate expected format signatures
     switch (ext) {
-        case '.png':
-            if (buffer.length < 8 ||
+        case '.png': {
+            if (buffer.length < 24 ||
                 buffer[0] !== 0x89 || buffer[1] !== 0x50 || buffer[2] !== 0x4E || buffer[3] !== 0x47 ||
                 buffer[4] !== 0x0D || buffer[5] !== 0x0A || buffer[6] !== 0x1A || buffer[7] !== 0x0A) {
                 return 'Invalid PNG signature (expected 89 50 4E 47 0D 0A 1A 0A)';
             }
+            const ihdrTag = buffer.toString('ascii', 12, 16);
+            if (ihdrTag !== 'IHDR') {
+                return 'Invalid PNG structure: missing IHDR chunk at offset 12';
+            }
+            const width = buffer.readUInt32BE(16);
+            const height = buffer.readUInt32BE(20);
+            if (width <= 0 || width > MAX_PNG_DIMENSION || height <= 0 || height > MAX_PNG_DIMENSION) {
+                return `PNG dimensions out of safe bounds (${width}x${height}, max ${MAX_PNG_DIMENSION}x${MAX_PNG_DIMENSION})`;
+            }
             return null;
+        }
 
         case '.jpg':
         case '.jpeg':
@@ -114,15 +144,23 @@ function checkMagicBytes(filePath, ext, buffer) {
             }
             return null;
 
-        case '.mp3':
+        case '.mp3': {
             const isId3 = buffer.length >= 3 && buffer[0] === 0x49 && buffer[1] === 0x44 && buffer[2] === 0x33;
             const isMpegSync = buffer.length >= 2 && buffer[0] === 0xFF && (buffer[1] & 0xE0) === 0xE0;
             if (!isId3 && !isMpegSync) {
                 return 'Invalid MP3 audio frame / ID3 signature';
             }
             return null;
+        }
 
-        case '.ttf':
+        case '.ogg':
+            if (buffer.length < 4 ||
+                buffer[0] !== 0x4F || buffer[1] !== 0x67 || buffer[2] !== 0x67 || buffer[3] !== 0x53) {
+                return 'Invalid OGG container signature (expected OggS / 4F 67 67 53)';
+            }
+            return null;
+
+        case '.ttf': {
             const isTrueType = buffer.length >= 4 && (
                 (buffer[0] === 0x00 && buffer[1] === 0x01 && buffer[2] === 0x00 && buffer[3] === 0x00) ||
                 (buffer[0] === 0x74 && buffer[1] === 0x72 && buffer[2] === 0x75 && buffer[3] === 0x65)
@@ -131,6 +169,7 @@ function checkMagicBytes(filePath, ext, buffer) {
                 return 'Invalid TrueType font signature';
             }
             return null;
+        }
 
         case '.otf':
             if (buffer.length < 4 ||
@@ -151,6 +190,26 @@ function checkMagicBytes(filePath, ext, buffer) {
         default:
             return `Unsupported file format: ${ext}`;
     }
+}
+
+function validateSafeText(fieldName, value, maxLength = 200) {
+    if (value === undefined || value === null) return null;
+    if (typeof value !== 'string') {
+        return `${fieldName} must be a string`;
+    }
+    if (value.length > maxLength) {
+        return `${fieldName} exceeds maximum length of ${maxLength} characters (got ${value.length})`;
+    }
+    if (/[<>]/.test(value)) {
+        return `${fieldName} contains forbidden HTML angle brackets (< or >)`;
+    }
+    if (/javascript\s*:/i.test(value) || /vbscript\s*:/i.test(value) || /data\s*:/i.test(value)) {
+        return `${fieldName} contains forbidden URI scheme`;
+    }
+    if (/[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]/.test(value)) {
+        return `${fieldName} contains forbidden control characters`;
+    }
+    return null;
 }
 
 function validateRelativeAssetPath(baseDir, relPath) {
@@ -193,12 +252,40 @@ for (const folder of themeFolders) {
             }
         }
 
+        // 1b. Text Field Injection & Length Validation
+        const textChecks = [
+            ['id', theme.id, 64],
+            ['name', theme.name, 100],
+            ['author', theme.author, 100],
+            ['description', theme.description, 1000]
+        ];
+        if (Array.isArray(theme.tags)) {
+            theme.tags.forEach((tag, idx) => textChecks.push([`tags[${idx}]`, tag, 40]));
+        }
+        if (theme.vfx?.statusText && typeof theme.vfx.statusText === 'object') {
+            for (const [k, v] of Object.entries(theme.vfx.statusText)) {
+                textChecks.push([`vfx.statusText.${k}`, v, 80]);
+            }
+        }
+        for (const [fieldName, val, maxLen] of textChecks) {
+            const textErr = validateSafeText(fieldName, val, maxLen);
+            if (textErr) {
+                console.error(`❌ Text Validation Failure in ${folder}: ${textErr}`);
+                hasErrors = true;
+            }
+        }
+
         // 2. Strict Security: Block executable, dangerous, or unverified files
         let totalThemeBytes = 0;
         function scanFiles(dir) {
             const files = fs.readdirSync(dir, { withFileTypes: true });
             for (const f of files) {
                 const fullPath = path.join(dir, f.name);
+                if (f.isSymbolicLink()) {
+                    console.error(`❌ Security Violation in ${folder}: Symbolic link "${f.name}" is forbidden!`);
+                    hasErrors = true;
+                    continue;
+                }
                 if (f.isDirectory()) {
                     scanFiles(fullPath);
                 } else {
@@ -224,13 +311,7 @@ for (const folder of themeFolders) {
                         hasErrors = true;
                     }
 
-                    const headerSize = Math.min(stat.size, 64);
-                    const fd = fs.openSync(fullPath, 'r');
-                    const buffer = Buffer.alloc(headerSize);
-                    fs.readSync(fd, buffer, 0, headerSize, 0);
-                    fs.closeSync(fd);
-
-                    const fullBuf = ext === '.json' ? fs.readFileSync(fullPath) : buffer;
+                    const fullBuf = fs.readFileSync(fullPath);
                     const magicError = checkMagicBytes(fullPath, ext, fullBuf);
                     if (magicError) {
                         console.error(`❌ Magic Bytes Security Failure in ${folder}/${f.name}: ${magicError}`);
@@ -272,6 +353,7 @@ for (const folder of themeFolders) {
             theme.decorations?.screenFrame,
             theme.decorations?.screenFrameMobile,
             theme.decorations?.cardFrame,
+            theme.decorations?.buttonRing,
             theme.decorations?.buttonImageIdle,
             theme.decorations?.buttonImageConnecting,
             theme.decorations?.buttonImageActive,
@@ -284,14 +366,56 @@ for (const folder of themeFolders) {
             theme.core?.sounds?.connect,
             theme.core?.sounds?.disconnect,
             theme.core?.sounds?.click,
+            theme.core?.sounds?.hover,
             theme.core?.sounds?.notification,
-            theme.core?.ui?.fontFile
+            theme.core?.sounds?.ambient,
+            theme.core?.ui?.FontFile || theme.core?.ui?.fontFile
         ];
+
+        if (Array.isArray(theme.vfx?.particleSprites)) {
+            if (theme.vfx.particleSprites.length > 12) {
+                console.error(`❌ Error in ${folder}: vfx.particleSprites cannot exceed 12 sprites`);
+                hasErrors = true;
+            }
+            for (const spritePath of theme.vfx.particleSprites) {
+                pathsToVerify.push(spritePath);
+            }
+        }
 
         if (theme.decorations?.cornerStickers) {
             for (const rel of Object.values(theme.decorations.cornerStickers)) {
                 pathsToVerify.push(rel);
             }
+        }
+
+        if (theme.apps?.obxodka?.sounds && typeof theme.apps.obxodka.sounds === 'object') {
+            for (const [k, sndPath] of Object.entries(theme.apps.obxodka.sounds)) {
+                if (k !== 'volume' && typeof sndPath === 'string') {
+                    pathsToVerify.push(sndPath);
+                }
+            }
+        }
+
+        if (theme.apps?.obxodka?.vpnButton && typeof theme.apps.obxodka.vpnButton === 'object') {
+            const btn = theme.apps.obxodka.vpnButton;
+            pathsToVerify.push(
+                btn.idleImage,
+                btn.connectingImage,
+                btn.activeImage,
+                btn.errorImage,
+                btn.idleVideo,
+                btn.connectingVideo,
+                btn.activeVideo,
+                btn.errorVideo,
+                btn.buttonImageIdle,
+                btn.buttonImageConnecting,
+                btn.buttonImageActive,
+                btn.buttonImageError,
+                btn.buttonVideoIdle,
+                btn.buttonVideoConnecting,
+                btn.buttonVideoActive,
+                btn.buttonVideoError
+            );
         }
 
         for (const p of pathsToVerify) {
@@ -319,6 +443,9 @@ for (const folder of themeFolders) {
         const hasFrames = !!(theme.decorations?.screenFrame || theme.decorations?.screenFrameMobile || theme.decorations?.cardFrame || theme.decorations?.cornerStickers);
         const hasIdolButton = !!(theme.decorations?.buttonImageIdle || theme.decorations?.buttonImageConnecting || theme.decorations?.buttonImageActive || theme.decorations?.buttonImageError || theme.apps?.obxodka?.tunnelButton?.style === 'custom_image');
         const hasButtonVideo = !!(theme.decorations?.buttonVideoIdle || theme.decorations?.buttonVideoConnecting || theme.decorations?.buttonVideoActive || theme.decorations?.buttonVideoError);
+        const hasScreenOverlay = !!(theme.vfx?.screenOverlay && theme.vfx.screenOverlay !== 'none');
+        const hasCustomFont = !!(theme.core?.ui?.FontFile || theme.core?.ui?.fontFile);
+        const hasReactiveVfx = !!(theme.vfx?.trafficReactive || theme.vfx?.interactiveParticles || theme.vfx?.activeOverrides);
 
         const catalogItem = {
             id: theme.id,
@@ -339,7 +466,10 @@ for (const folder of themeFolders) {
                 hasFrames,
                 hasIdolButton,
                 hasButtonVideo,
-                hasParticles: !!(theme.vfx && theme.vfx.particles && theme.vfx.particles !== 'none')
+                hasParticles: !!(theme.vfx && theme.vfx.particles && theme.vfx.particles !== 'none'),
+                hasScreenOverlay,
+                hasCustomFont,
+                hasReactiveVfx
             },
             updatedAt: new Date().toISOString()
         };

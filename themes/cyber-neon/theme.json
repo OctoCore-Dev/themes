@@ -61,7 +61,9 @@
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/click.wav"
+      "notification": "assets/sounds/click.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav"
     }
   },
   "background": {
@@ -97,7 +99,27 @@
     "particles": "neon_sparks",
     "particleSprite": "assets/particles/cyber_spark.png",
     "intensity": 0.75,
-    "speed": 1.2
+    "speed": 1.2,
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.45,
+    "screenOverlay": "cyber_hud",
+    "trafficGraphStyle": "cyber_bars",
+    "buttonLoaderStyle": "dual_arc",
+    "statusText": {
+      "disconnected": "NETRUN: OFFLINE",
+      "connecting": "BYPASSING ICE...",
+      "connected": "NEURAL LINK ACTIVE",
+      "error": "ICE BREACH FAILED",
+      "buttonIdle": "JACK IN",
+      "buttonConnecting": "SYNC",
+      "buttonConnected": "ONLINE"
+    },
+    "activeOverrides": {
+      "accentColor": "#00F0FF",
+      "glowColor": "#FF0055",
+      "particleSpeedMultiplier": 1.8
+    }
   },
   "apps": {
     "obxodka": {

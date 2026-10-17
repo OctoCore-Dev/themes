@@ -106,12 +106,32 @@
     "showQuickToggles": true
   },
   "vfx": {
-    "particles": "custom",
+    "particles": "twinkle",
     "particleSprite": "assets/particles/gold_star.png",
     "intensity": 0.65,
     "speed": 0.9,
     "size": 1.2,
-    "color": "#FFD700"
+    "color": "#FFD700",
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.35,
+    "screenOverlay": "golden_rays",
+    "trafficGraphStyle": "aurora_ribbon",
+    "buttonLoaderStyle": "crystal",
+    "statusText": {
+      "disconnected": "ЗАЩИТА ОТКЛЮЧЕНА",
+      "connecting": "УСТАНОВКА КАНАЛА...",
+      "connected": "РУБЕЖ ПОД ЗАЩИТОЙ",
+      "error": "СБОЙ ЛИНИИ",
+      "buttonIdle": "СТАРТ",
+      "buttonConnecting": "СВЯЗЬ",
+      "buttonConnected": "АКТИВЕН"
+    },
+    "activeOverrides": {
+      "accentColor": "#FFD700",
+      "glowColor": "#E63946",
+      "particleSpeedMultiplier": 1.4
+    }
   },
   "apps": {
     "obxodka": {

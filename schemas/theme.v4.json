@@ -71,11 +71,23 @@
               "type": "string",
               "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
             },
+            "BgElevated": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "BgInput": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
             "Primary": {
               "type": "string",
               "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
             },
             "PrimaryBright": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "PrimaryDim": {
               "type": "string",
               "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
             },
@@ -91,7 +103,19 @@
               "type": "string",
               "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
             },
+            "TextMuted": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
             "SolidBorderDark": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "BorderSubtle": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "BorderMedium": {
               "type": "string",
               "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
             },
@@ -123,11 +147,56 @@
             },
             "BorderThickness": {
               "type": "number"
+            },
+            "CardOpacity": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0
+            },
+            "FontRegular": {
+              "type": "string"
+            },
+            "FontMedium": {
+              "type": "string"
+            },
+            "FontBold": {
+              "type": "string"
+            },
+            "FontTitle": {
+              "type": "string"
+            },
+            "FontFile": {
+              "type": "string"
             }
           }
         },
         "sounds": {
-          "type": "object"
+          "type": "object",
+          "properties": {
+            "click": {
+              "type": "string"
+            },
+            "hover": {
+              "type": "string"
+            },
+            "notification": {
+              "type": "string"
+            },
+            "connect": {
+              "type": "string"
+            },
+            "disconnect": {
+              "type": "string"
+            },
+            "ambient": {
+              "type": "string"
+            },
+            "volume": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0
+            }
+          }
         }
       }
     },
@@ -242,7 +311,178 @@
       "type": "object"
     },
     "vfx": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "particles": {
+          "type": "string",
+          "enum": [
+            "none",
+            "snow",
+            "sakura_petals",
+            "crows_feathers",
+            "embers",
+            "sparks",
+            "neon_sparks",
+            "fireflies",
+            "bubbles",
+            "rain",
+            "twinkle",
+            "matrix",
+            "custom"
+          ]
+        },
+        "particleSprite": {
+          "type": "string"
+        },
+        "particleSprites": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "string"
+          }
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 2.0
+        },
+        "speed": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 5.0
+        },
+        "size": {
+          "type": "number",
+          "minimum": 0.2,
+          "maximum": 4.0
+        },
+        "color": {
+          "type": "string",
+          "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+        },
+        "interactiveParticles": {
+          "type": "boolean"
+        },
+        "trafficReactive": {
+          "type": "boolean"
+        },
+        "parallaxIntensity": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0
+        },
+        "screenOverlay": {
+          "type": "string",
+          "enum": [
+            "none",
+            "cyber_hud",
+            "scanlines",
+            "aurora",
+            "crimson_vignette",
+            "mystic_fog",
+            "golden_rays",
+            "frost_vignette"
+          ]
+        },
+        "trafficGraphStyle": {
+          "type": "string",
+          "enum": [
+            "neon_wave",
+            "cyber_bars",
+            "pulse_line",
+            "aurora_ribbon"
+          ]
+        },
+        "buttonLoaderStyle": {
+          "type": "string",
+          "enum": [
+            "crystal",
+            "reactor",
+            "dual_arc",
+            "runes",
+            "none"
+          ]
+        },
+        "glow": {
+          "type": "object",
+          "properties": {
+            "intensity": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 2.0
+            },
+            "radius": {
+              "type": "number",
+              "minimum": 0.0
+            },
+            "coreColor": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "bloomColor": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            }
+          }
+        },
+        "statusText": {
+          "type": "object",
+          "properties": {
+            "disconnected": {
+              "type": "string"
+            },
+            "connecting": {
+              "type": "string"
+            },
+            "connected": {
+              "type": "string"
+            },
+            "error": {
+              "type": "string"
+            },
+            "buttonIdle": {
+              "type": "string"
+            },
+            "buttonConnecting": {
+              "type": "string"
+            },
+            "buttonConnected": {
+              "type": "string"
+            }
+          }
+        },
+        "activeOverrides": {
+          "type": "object",
+          "properties": {
+            "accentColor": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "glowColor": {
+              "type": "string",
+              "pattern": "^#([0-9a-fA-F]{6}|[0-9a-fA-F]{8})$"
+            },
+            "particleSpeedMultiplier": {
+              "type": "number",
+              "minimum": 0.1,
+              "maximum": 5.0
+            },
+            "screenOverlay": {
+              "type": "string",
+              "enum": [
+                "none",
+                "cyber_hud",
+                "scanlines",
+                "aurora",
+                "crimson_vignette",
+                "mystic_fog",
+                "golden_rays",
+                "frost_vignette"
+              ]
+            }
+          }
+        }
+      }
     },
     "typography": {
       "type": "object"

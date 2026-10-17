@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-10-16T13:03:41.535Z",
+  "generatedAt": "2026-10-17T22:09:34.976Z",
   "totalThemes": 7,
   "themes": [
     {
@@ -32,9 +32,12 @@
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
-        "hasParticles": true
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-16T13:03:41.524Z"
+      "updatedAt": "2026-10-17T22:09:34.717Z"
     },
     {
       "id": "halloween-2026",
@@ -68,9 +71,12 @@
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
-        "hasParticles": true
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": true,
+        "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-16T13:03:41.530Z"
+      "updatedAt": "2026-10-17T22:09:34.781Z"
     },
     {
       "id": "itachi",
@@ -102,9 +108,12 @@
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
-        "hasParticles": true
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-16T13:03:41.531Z"
+      "updatedAt": "2026-10-17T22:09:34.851Z"
     },
     {
       "id": "nordic-frost",
@@ -136,9 +145,12 @@
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
-        "hasParticles": true
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-16T13:03:41.532Z"
+      "updatedAt": "2026-10-17T22:09:34.875Z"
     },
     {
       "id": "russia",
@@ -170,9 +182,12 @@
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
-        "hasParticles": true
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-16T13:03:41.533Z"
+      "updatedAt": "2026-10-17T22:09:34.918Z"
     },
     {
       "id": "russian-winter",
@@ -205,9 +220,12 @@
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
-        "hasParticles": true
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-16T13:03:41.534Z"
+      "updatedAt": "2026-10-17T22:09:34.948Z"
     },
     {
       "id": "sakura",
@@ -238,9 +256,12 @@
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
-        "hasParticles": true
+        "hasParticles": true,
+        "hasScreenOverlay": false,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-16T13:03:41.535Z"
+      "updatedAt": "2026-10-17T22:09:34.975Z"
     }
   ]
 }

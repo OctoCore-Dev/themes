@@ -1,4 +1,4 @@
-﻿{
+{
   "$schema": "../../schemas/theme.v4.json",
   "id": "starter-theme",
   "name": "Starter Template",
@@ -51,7 +51,11 @@
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/click.wav"
+      "hover": "assets/sounds/click.wav",
+      "notification": "assets/sounds/click.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav",
+      "volume": 0.85
     }
   },
   "background": {
@@ -79,7 +83,38 @@
     "showQuickToggles": true
   },
   "vfx": {
-    "particles": "none"
+    "particles": "twinkle",
+    "intensity": 0.65,
+    "speed": 1.0,
+    "size": 1.0,
+    "color": "#58A6FF",
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.35,
+    "screenOverlay": "none",
+    "trafficGraphStyle": "neon_wave",
+    "buttonLoaderStyle": "crystal",
+    "glow": {
+      "intensity": 1.0,
+      "radius": 24.0,
+      "coreColor": "#58A6FF",
+      "bloomColor": "#A371F7"
+    },
+    "statusText": {
+      "disconnected": "НЕ ПОДКЛЮЧЕНО",
+      "connecting": "ПОДКЛЮЧЕНИЕ...",
+      "connected": "ЗАЩИЩЕНО",
+      "error": "ОШИБКА СЕТИ",
+      "buttonIdle": "СТАРТ",
+      "buttonConnecting": "СВЯЗЬ",
+      "buttonConnected": "В СЕТИ"
+    },
+    "activeOverrides": {
+      "accentColor": "#58A6FF",
+      "glowColor": "#A371F7",
+      "particleSpeedMultiplier": 1.5,
+      "screenOverlay": "aurora"
+    }
   },
   "apps": {
     "obxodka": {

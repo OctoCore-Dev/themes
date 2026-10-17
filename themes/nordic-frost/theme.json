@@ -62,7 +62,9 @@
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/click.wav"
+      "notification": "assets/sounds/click.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav"
     }
   },
   "background": {
@@ -98,7 +100,27 @@
     "particles": "snow",
     "particleSprite": "assets/particles/snowflake.png",
     "intensity": 0.65,
-    "speed": 0.8
+    "speed": 0.8,
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.35,
+    "screenOverlay": "aurora",
+    "trafficGraphStyle": "aurora_ribbon",
+    "buttonLoaderStyle": "crystal",
+    "statusText": {
+      "disconnected": "ЩИТ РАЗМОРОЖЕН",
+      "connecting": "КОВКА ЛЬДА...",
+      "connected": "СЕВЕРНЫЙ ЩИТ АКТИВЕН",
+      "error": "ТРЕЩИНА ВО ЛЬДУ",
+      "buttonIdle": "СТАРТ",
+      "buttonConnecting": "ЛЁД",
+      "buttonConnected": "ЗАЩИТА"
+    },
+    "activeOverrides": {
+      "accentColor": "#38BDF8",
+      "glowColor": "#7DD3FC",
+      "particleSpeedMultiplier": 1.5
+    }
   },
   "apps": {
     "obxodka": {

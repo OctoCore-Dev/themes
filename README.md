@@ -59,9 +59,19 @@
   * Если автор темы указан как `"OctoCore"`, в приложении рядом с именем автора автоматически отображается стильный знак верификации **`[✓ Официальная]`**.
   * Официальные темы гарантированно проходят ручную модерацию, оптимизацию размеров ассетов и строгие тесты безопасности.
 
-* 🌸 **VFX-частицы (`vfx`):** Лепестки сакуры, перья воронов, неоновые искры, снег, дождь или кастомный спрайт (`particleSprite`).
-* 🎵 **Звуковые паки (`core.sounds`):** Звуки кликов, подключения и отключения VPN.
-* 🎨 **Цветовая палитра и градиенты:** Полный набор токенов `Primary`, `BgBase`, `BgSurface`, `Accent`.
+* 🌸 **VFX-частицы и реактивная физика (`vfx`):**
+  * Пресеты: `sakura_petals`, `crows_feathers`, `neon_sparks`, `snow`, `fireflies`, `bubbles`, `rain`, `embers`, `sparks`, `twinkle`, `matrix`, `custom`.
+  * Мульти-спрайты `particleSprites` (массив до 12 кастомных PNG-спрайтов в одной теме, например летучие мыши + тыквенные искры + огоньки).
+  * Интерактивная физика: `interactiveParticles` (разлет от курсора/касаний), `trafficReactive` (ускорение частиц от скорости трафика VPN), `parallaxIntensity` (3D-параллакс фона и слоев).
+* 🖥️ **Экранные шейдерные оверлеи (`vfx.screenOverlay`) и стили графиков (`vfx.trafficGraphStyle`):**
+  * Атмосферные постобработки: `cyber_hud`, `scanlines`, `aurora`, `crimson_vignette`, `mystic_fog`, `golden_rays`, `frost_vignette`.
+  * Стили графика трафика: `neon_wave`, `cyber_bars`, `pulse_line`, `aurora_ribbon`.
+  * Процедурные лоадеры кнопки (`vfx.buttonLoaderStyle`): `crystal`, `reactor`, `dual_arc`, `runes`, `none`.
+* 🏷️ **Кастомные статусы и активная фаза (`vfx.statusText` и `vfx.activeOverrides`):**
+  * Полная кастомизация текстов статуса (`disconnected`, `connecting`, `connected`, `error`) и подписей кнопки (`buttonIdle`, `buttonConnecting`, `buttonConnected`).
+  * Динамическая смена акцентов, свечения и скорости частиц при активном VPN (`activeOverrides`).
+* 🎵 **Звуковые паки (`core.sounds`):** Звуки кликов (`click`), наведения (`hover`), уведомлений (`notification`), подключения (`connect`), отключения (`disconnect`) и фонового эмбиента (`ambient`) в форматах `.wav`, `.mp3`, `.ogg` с регулировкой `volume`.
+* 🎨 **Цветовая палитра и градиенты:** Полный набор из 17 цветовых токенов (`BgBase`, `BgSurface`, `BgElevated`, `BgInput`, `Primary`, `PrimaryBright`, `PrimaryDim`, `Accent`, `TextPrimary`, `TextSecondary`, `TextMuted`, `SolidBorderDark`, `BorderSubtle`, `BorderMedium`, `Success`, `Warning`, `Error`).
 
 * 🤖 **Умное автоопределение форматов движком:**
   * **Фон:** Клиент сам анализирует расширения и магические байты файлов. Независимо от того, указан путь в `imageSource` или `videoSource`, код автоматически определит тип контента (видео MP4/WebM или фото JPG/PNG/WebP) и направит его в нужный рендерер (видеоплеер `MediaElement` с авто-зацикливанием или фоновый постер `Image`).
@@ -90,19 +100,35 @@ ffmpeg -framerate 30 -i frame_%03d.png -vcodec libwebp -lossless 0 -q:v 80 -loop
   "id": "sakura-live",
   "name": "Sakura Live Bloom",
   "author": "OctoCore Community",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Живая тема с видео-фоном падающих лепестков, анимированной сакурой на кнопке и угловыми ветвями",
   "tags": ["anime", "sakura", "live", "video"],
   "core": {
     "colors": {
       "BgBase": "#100912",
       "BgSurface": "#1E1220",
+      "BgElevated": "#2B192E",
+      "BgInput": "#170D19",
       "Primary": "#FF94B8",
       "PrimaryBright": "#FFB8D0",
+      "PrimaryDim": "#D45D87",
       "Accent": "#FF699E",
       "TextPrimary": "#FFF0F5",
       "TextSecondary": "#D8B4C8",
-      "SolidBorderDark": "#422038"
+      "TextMuted": "#8F6D80",
+      "SolidBorderDark": "#422038",
+      "BorderSubtle": "#301729",
+      "BorderMedium": "#5E2D4F",
+      "Success": "#78D6A4",
+      "Warning": "#FAD02C",
+      "Error": "#FF6B6B"
+    },
+    "sounds": {
+      "click": "assets/sounds/chime.wav",
+      "hover": "assets/sounds/chime.wav",
+      "connect": "assets/sounds/chime.wav",
+      "disconnect": "assets/sounds/chime.wav",
+      "volume": 0.85
     }
   },
   "background": {
@@ -124,7 +150,24 @@ ffmpeg -framerate 30 -i frame_%03d.png -vcodec libwebp -lossless 0 -q:v 80 -loop
   },
   "vfx": {
     "particles": "sakura_petals",
-    "particleSprite": "assets/particles/petal.png"
+    "particleSprite": "assets/particles/petal.png",
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.35,
+    "screenOverlay": "none",
+    "trafficGraphStyle": "neon_wave",
+    "buttonLoaderStyle": "crystal",
+    "statusText": {
+      "disconnected": "ВЕТЕР СТИХ",
+      "connecting": "ЦВЕТЕНИЕ САКУРЫ...",
+      "connected": "ПОД ЗАЩИТОЙ ЛЕПЕСТКОВ",
+      "error": "ОШИБКА СВЯЗИ"
+    },
+    "activeOverrides": {
+      "accentColor": "#F472B6",
+      "glowColor": "#FB7185",
+      "particleSpeedMultiplier": 1.5
+    }
   }
 }
 ```
@@ -141,7 +184,7 @@ ffmpeg -framerate 30 -i frame_%03d.png -vcodec libwebp -lossless 0 -q:v 80 -loop
 3. **Настройте манифест `theme.json`** по спецификации [schemas/theme.v4.json](schemas/theme.v4.json).
 4. **Замените иконку и превью**: `icon.png` (квадрат 512x512) и `preview.jpg` (16:9 1280x720).
 5. **Положите ассеты** в подпапку `assets/` (видео, animated webp кнопки, 9-slice рамку, звуки).
-6. **Проверьте локально**:
+6. **Протестируйте локально в клиенте**: упакуйте содержимое папки темы в `.zip` архив и импортируйте его в клиенте `obxodka` («Магазин тем» → «Импорт .zip»), а также запустите валидатор:
    ```bash
    npm run validate
    # или напрямую через Node:

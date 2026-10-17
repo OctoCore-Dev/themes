@@ -92,14 +92,19 @@
   "BlurIntensity": 20,
   "BorderThickness": 1.0,
   "CardOpacity": 0.85,
+  "FontRegular": "Inter-Regular",
+  "FontMedium": "Inter-Medium",
+  "FontBold": "Inter-Bold",
+  "FontTitle": "Creepster",
   "FontFile": "assets/fonts/CustomFont.ttf"
 }
 ```
 - **`CornerRadius`**: Радиус скругления карточек (по умолчанию `16`).
 - **`BlurIntensity`**: Сила эффекта Glassmorphism (по умолчанию `20`).
 - **`BorderThickness`**: Толщина контуров карточек (по умолчанию `1.0`).
-- **`CardOpacity`**: Базовая прозрачность карточек поверх живого фона (от `0.20` до `1.00`).
-- **`FontFile`**: Путь к кастомному шрифту `.ttf` или `.otf`.
+- **`CardOpacity`**: Базовая прозрачность карточек поверх живого фона (от `0.0` до `1.0`).
+- **`FontRegular` / `FontMedium` / `FontBold` / `FontTitle`**: Семейства или алиасы шрифтов для основного текста и заголовков.
+- **`FontFile`**: Относительный путь к кастомному файлу шрифта `.ttf` или `.otf` внутри папки темы.
 
 ---
 
@@ -108,12 +113,18 @@
 ```json
 "sounds": {
   "click": "assets/sounds/click.wav",
+  "hover": "assets/sounds/hover.wav",
   "notification": "assets/sounds/notify.wav",
   "connect": "assets/sounds/vpn_connected.wav",
-  "disconnect": "assets/sounds/vpn_disconnected.wav"
+  "disconnect": "assets/sounds/vpn_disconnected.wav",
+  "ambient": "assets/sounds/ambient_loop.ogg",
+  "volume": 0.85
 }
 ```
-Форматы: `.wav` (PCM 16-bit) или `.mp3` с объемом не более 1-2 МБ.
+- Форматы: `.wav` (PCM 16-bit), `.mp3` или `.ogg` (`OggS`) объемом до 5 МБ.
+- **`hover`**: Короткий тактильный отклик при наведении на карточки и кнопки.
+- **`ambient`**: Бесшовная фоновая аудио-атмосфера при активном окне приложения.
+- **`volume`**: Базовый уровень громкости звукового пака темы (`0.0`–`1.0`).
 
 ---
 
@@ -145,56 +156,99 @@
 
 ---
 
-## 8. Визуальные эффекты частиц (`vfx.particles`)
+## 8. Визуальные эффекты частиц и физика (`vfx`)
 
 ```json
 "vfx": {
-  "particles": "sakura_petals",
-  "particleSprite": "assets/particles/petal.png",
-  "intensity": 0.6,
-  "speed": 1.0,
-  "size": 1.0,
-  "color": "#FFB8D0"
+  "particles": "custom",
+  "particleSprite": "assets/particles/wisp.png",
+  "particleSprites": [
+    "assets/particles/wisp.png",
+    "assets/particles/bat.png",
+    "assets/particles/pumpkin_spark.png"
+  ],
+  "intensity": 0.75,
+  "speed": 1.1,
+  "size": 1.2,
+  "color": "#39FF14",
+  "interactiveParticles": true,
+  "trafficReactive": true,
+  "parallaxIntensity": 0.4
 }
 ```
-**Встроенные пресеты (`particles`):**
-`sakura_petals`, `crows_feathers`, `neon_sparks`, `snow`, `fireflies`, `bubbles`, `rain`, `none`, `custom`.
+- **Встроенные пресеты (`particles`):**
+  `none`, `snow`, `sakura_petals`, `crows_feathers`, `embers`, `sparks`, `neon_sparks`, `fireflies`, `bubbles`, `rain`, `twinkle`, `matrix`, `custom`.
+- **`particleSprite`**: Одиночный кастомный PNG-спрайт частицы.
+- **`particleSprites`**: Массив до **12** различных PNG-спрайтов, которые одновременно рендерятся в потоке частиц (например, летучие мыши, искры тыквы и призрачные огоньки в теме `halloween-2026`).
+- **`interactiveParticles`**: Частицы мягко отталкиваются и закручиваются вокруг курсора мыши или точки касания.
+- **`trafficReactive`**: Скорость и турбулентность частиц динамически растут пропорционально текущему сетевому трафику VPN.
+- **`parallaxIntensity`**: Сила многослойного 3D-параллакса фона, рамок и частиц при движении курсора (`0.0`–`1.0`).
 
 ---
 
-## 9. Неоновое свечение и стиль лоадера (`vfx.glow` и `vfx.buttonLoaderStyle`)
-
-Начиная с версии темы v4.1+, создатели могут управлять неоновым сиянием кнопки и стилем процедурной векторной анимации SkiaSharp:
+## 9. Экранные шейдеры, графики трафика, лоадеры и кастомные статусы (`vfx`)
 
 ```json
 "vfx": {
-  "buttonLoaderStyle": "crystal",
+  "screenOverlay": "cyber_hud",
+  "trafficGraphStyle": "cyber_bars",
+  "buttonLoaderStyle": "reactor",
   "glow": {
     "intensity": 1.2,
     "radius": 24.0,
     "coreColor": "#00F0FF",
-    "bloomColor": "#7000FF"
+    "bloomColor": "#FF0055"
+  },
+  "statusText": {
+    "disconnected": "NETRUN: OFFLINE",
+    "connecting": "BYPASSING ICE...",
+    "connected": "NEURAL LINK ACTIVE",
+    "error": "ICE BREACH FAILED",
+    "buttonIdle": "JACK IN",
+    "buttonConnecting": "SYNC",
+    "buttonConnected": "ONLINE"
+  },
+  "activeOverrides": {
+    "accentColor": "#00F0FF",
+    "glowColor": "#FF0055",
+    "particleSpeedMultiplier": 1.8,
+    "screenOverlay": "cyber_hud"
   }
 }
 ```
 
-- **`buttonLoaderStyle`**:
-  - `"crystal"`: Квантовый гипер-кристалл (5 вращающихся сакральных полигонов с многослойным блумом).
-  - `"reactor"`: Живой квантовый реактор с фотонными искрами, ускоряющимися от реального сетевого трафика.
-  - `"dual_arc"`: Классические неоновые дуги со световыми ядрами.
-- **`glow.intensity`**: Базовый множитель свечения (по умолчанию `1.0`, диапазон `0.0`–`2.0`).
-- **`glow.radius`**: Радиус атмосферного рассеивания ауры вокруг кнопки в пикселях.
-- **`glow.coreColor`**: Цвет контурных линий и энергетических треков (HEX).
-- **`glow.bloomColor`**: Цвет внешнего мягкого неонового ореола и ударных волн (HEX).
+- **`screenOverlay`** *(полноэкранный процедурный шейдерный слой)*:
+  - `"none"` — без оверлея.
+  - `"cyber_hud"` — голографическая кибер-сетка и телеметрические уголки.
+  - `"scanlines"` — CRT сканлайны в стиле ретро-вейва.
+  - `"aurora"` — переливающееся северное сияние в верхней части экрана.
+  - `"crimson_vignette"` — багровая виньетка чакры по краям экрана.
+  - `"mystic_fog"` — клубящийся мистический туман у основания окна.
+  - `"golden_rays"` — торжественные золотые лучи свечения сверху.
+  - `"frost_vignette"` — морозная изморозь по краям стекла.
+- **`trafficGraphStyle`** *(стиль виджета скорости трафика)*:
+  - `"neon_wave"` — плавная неоновая кривая Бетье с градиентной заливкой.
+  - `"cyber_bars"` — дискретные киберпанк-столбцы эквалайзера.
+  - `"pulse_line"` — кардиограмма / импульсная линия с ярким фронтом.
+  - `"aurora_ribbon"` — многослойная шелковая лента северного сияния.
+- **`buttonLoaderStyle`** *(процедурная векторная анимация вокруг кнопки)*:
+  - `"crystal"` — квантовый гипер-кристалл из вращающихся полигонов.
+  - `"reactor"` — энергетическое ядро с фотонными искрами.
+  - `"dual_arc"` — классические двойные неоновые дуги.
+  - `"runes"` — вращающееся кольцо рунических символов.
+  - `"none"` — отключить процедурный векторный лоадер.
+- **`statusText`**: Переопределение заголовков состояния VPN (`disconnected`, `connecting`, `connected`, `error`) и текста внутри центральной кнопки (`buttonIdle`, `buttonConnecting`, `buttonConnected`).
+- **`activeOverrides`**: Параметры, которые автоматически активируются при переходе VPN в состояние `Connected` (`accentColor`, `glowColor`, `particleSpeedMultiplier`, `screenOverlay`).
 
 ---
 
-## 10. Пользовательские настройки темы в приложении
+## 10. Пользовательские настройки темы и локальный импорт `.zip`
 
 Пользователь приложения может индивидуально кастомизировать любую примененную тему в разделе «Магазин тем»:
 1. **Прозрачность карточек (Card Opacity)**: от `20%` (сильный акцент на живой фон/видео) до `100%` (матовая контрастность).
 2. **Интенсивность неона (Neon Glow Intensity)**: ползунок от `0%` до `200%`, влияющий на ауру кнопки, свечение гипер-кристалла и размах ударных волн при подключении.
 3. **Фоновые частицы (Particles)**: тумблер включения/выключения физической симуляции частиц.
 4. **Живое видео (Video)**: тумблер воспроизведения видео-фона (автоматически экономит ресурсы батареи).
-5. **Звуковые эффекты (Sounds)**: тумблер звуков кликов и статусов соединения.
+5. **Звуковые эффекты (Sounds)**: тумблер звуков кликов, наведения, эмбиента и статусов соединения.
+6. **Импорт локального `.zip` пакета**: авторы тем могут загрузить свой `.zip` архив прямо в клиент для мгновенного предпросмотра и отладки всех эффектов.
 

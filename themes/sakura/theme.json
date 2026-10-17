@@ -21,12 +21,18 @@
     "colors": {
       "BgBase": "#100912",
       "BgSurface": "#1E1220",
+      "BgElevated": "#2B192E",
+      "BgInput": "#170D19",
       "Primary": "#FF94B8",
       "PrimaryBright": "#FFB8D0",
+      "PrimaryDim": "#D45D87",
       "Accent": "#FF699E",
       "TextPrimary": "#FFF0F5",
       "TextSecondary": "#D8B4C8",
+      "TextMuted": "#8F6D80",
       "SolidBorderDark": "#422038",
+      "BorderSubtle": "#301729",
+      "BorderMedium": "#5E2D4F",
       "Success": "#78D6A4",
       "Warning": "#FAD02C",
       "Error": "#FF6B6B"
@@ -50,11 +56,14 @@
     "ui": {
       "CornerRadius": 16,
       "BlurIntensity": 25,
-      "BorderThickness": 1.5
+      "BorderThickness": 1.5,
+      "CardOpacity": 0.85
     },
     "sounds": {
       "click": "assets/sounds/chime.wav",
-      "notification": "assets/sounds/chime.wav"
+      "notification": "assets/sounds/chime.wav",
+      "connect": "assets/sounds/chime.wav",
+      "disconnect": "assets/sounds/chime.wav"
     }
   },
   "background": {
@@ -89,7 +98,28 @@
   "vfx": {
     "particles": "sakura_petals",
     "particleSprite": "assets/particles/petal.png",
-    "intensity": 0.8
+    "intensity": 0.8,
+    "speed": 1.0,
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.35,
+    "screenOverlay": "none",
+    "trafficGraphStyle": "neon_wave",
+    "buttonLoaderStyle": "crystal",
+    "statusText": {
+      "disconnected": "ВЕТЕР СТИХ",
+      "connecting": "ЦВЕТЕНИЕ САКУРЫ...",
+      "connected": "ПОД ЗАЩИТОЙ ЛЕПЕСТКОВ",
+      "error": "ОШИБКА СВЯЗИ",
+      "buttonIdle": "СТАРТ",
+      "buttonConnecting": "ПОТОК",
+      "buttonConnected": "ЦВЕТЕТ"
+    },
+    "activeOverrides": {
+      "accentColor": "#F472B6",
+      "glowColor": "#FB7185",
+      "particleSpeedMultiplier": 1.5
+    }
   },
   "apps": {
     "obxodka": {

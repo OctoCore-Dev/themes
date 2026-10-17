@@ -122,10 +122,35 @@
   "vfx": {
     "particles": "custom",
     "particleSprite": "assets/particles/wisp.png",
+    "particleSprites": [
+      "assets/particles/wisp.png",
+      "assets/particles/bat.png",
+      "assets/particles/pumpkin_spark.png"
+    ],
     "intensity": 0.75,
     "speed": 1.1,
     "size": 1.2,
-    "color": "#39FF14"
+    "color": "#39FF14",
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.4,
+    "screenOverlay": "mystic_fog",
+    "trafficGraphStyle": "neon_wave",
+    "buttonLoaderStyle": "reactor",
+    "statusText": {
+      "disconnected": "ВНЕ ЗАЩИТЫ",
+      "connecting": "ПРИЗЫВ ДУХОВ...",
+      "connected": "ПОД ПОКРОВОМ НОЧИ",
+      "error": "СБОЙ РИТУАЛА",
+      "buttonIdle": "РИТУАЛ",
+      "buttonConnecting": "ЧАРЫ",
+      "buttonConnected": "АКТИВНО"
+    },
+    "activeOverrides": {
+      "accentColor": "#FF7518",
+      "glowColor": "#A855F7",
+      "particleSpeedMultiplier": 1.6
+    }
   },
   "apps": {
     "obxodka": {
