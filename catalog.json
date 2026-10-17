@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-10-17T22:09:34.976Z",
+  "generatedAt": "2026-10-17T22:09:47.319Z",
   "totalThemes": 7,
   "themes": [
     {
@@ -37,7 +37,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-17T22:09:34.717Z"
+      "updatedAt": "2026-10-17T22:09:47.225Z"
     },
     {
       "id": "halloween-2026",
@@ -76,7 +76,7 @@
         "hasCustomFont": true,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-17T22:09:34.781Z"
+      "updatedAt": "2026-10-17T22:09:47.246Z"
     },
     {
       "id": "itachi",
@@ -113,7 +113,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-17T22:09:34.851Z"
+      "updatedAt": "2026-10-17T22:09:47.283Z"
     },
     {
       "id": "nordic-frost",
@@ -150,7 +150,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-17T22:09:34.875Z"
+      "updatedAt": "2026-10-17T22:09:47.287Z"
     },
     {
       "id": "russia",
@@ -187,7 +187,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-17T22:09:34.918Z"
+      "updatedAt": "2026-10-17T22:09:47.301Z"
     },
     {
       "id": "russian-winter",
@@ -225,7 +225,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-17T22:09:34.948Z"
+      "updatedAt": "2026-10-17T22:09:47.310Z"
     },
     {
       "id": "sakura",
@@ -261,7 +261,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-17T22:09:34.975Z"
+      "updatedAt": "2026-10-17T22:09:47.319Z"
     }
   ]
 }
