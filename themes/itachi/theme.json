@@ -61,7 +61,7 @@
       "CardOpacity": 0.85
     },
     "sounds": {
-      "click": "assets/sounds/chime.wav",
+      "click": "assets/sounds/click.wav",
       "notification": "assets/sounds/chime.wav",
       "connect": "assets/sounds/connect.wav",
       "disconnect": "assets/sounds/chime.wav"
@@ -131,7 +131,8 @@
       },
       "sounds": {
         "connect": "assets/sounds/connect.wav",
-        "disconnect": "assets/sounds/chime.wav"
+        "disconnect": "assets/sounds/chime.wav",
+        "click": "assets/sounds/click.wav"
       }
     },
     "maps": {
