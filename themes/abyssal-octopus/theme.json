@@ -1,0 +1,174 @@
+{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "abyssal-octopus",
+  "name": "Octopus Abyssal",
+  "author": "OctoCore",
+  "version": "1.0.0",
+  "description": "Фирменная флагманская тема Obxodka: биолюминесцентная океаническая бездна, электрическое цианово-фиолетовое свечение Кракена, всплывающие глубинные сферы и искры, 4-фазное энергетическое ядро Осьминога и глубокий гидроакустический саундпак сонара",
+  "tags": [
+    "octopus",
+    "abyss",
+    "ocean",
+    "bioluminescent",
+    "cyan",
+    "purple",
+    "official",
+    "live"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#040914",
+      "BgSurface": "#091326",
+      "BgElevated": "#10203D",
+      "BgInput": "#070F1F",
+      "Primary": "#00E5FF",
+      "PrimaryBright": "#66F0FF",
+      "PrimaryDim": "#0099B8",
+      "Accent": "#8B5CF6",
+      "TextPrimary": "#F0F8FF",
+      "TextSecondary": "#94B8D8",
+      "TextMuted": "#4F6D8A",
+      "SolidBorderDark": "#12284C",
+      "BorderSubtle": "#0E203D",
+      "BorderMedium": "#00B8D4",
+      "Success": "#00E676",
+      "Warning": "#FFCA28",
+      "Error": "#FF1744"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 45,
+        "stops": [
+          "#00E5FF",
+          "#8B5CF6"
+        ]
+      },
+      "SurfaceGradient": {
+        "angle": 135,
+        "stops": [
+          "#10203D",
+          "#050B18"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 26,
+      "BorderThickness": 1.5,
+      "CardOpacity": 0.84
+    },
+    "sounds": {
+      "click": "assets/sounds/click.wav",
+      "hover": "assets/sounds/hover.wav",
+      "notification": "assets/sounds/notification.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav",
+      "ambient": "assets/sounds/ambient.wav"
+    }
+  },
+  "background": {
+    "type": "video",
+    "videoSource": "assets/bg.mp4",
+    "imageSource": "assets/bg.jpg",
+    "fallbackImage": "assets/bg.jpg",
+    "loop": true,
+    "muted": true,
+    "opacity": 0.45
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/frame.png",
+    "screenFrameMobile": "assets/frames/frame_mobile.png",
+    "cardFrame": "assets/frames/card_frame.png",
+    "frameSlice": {
+      "top": 80,
+      "right": 80,
+      "bottom": 80,
+      "left": 80
+    },
+    "frameSliceMobile": {
+      "top": 90,
+      "right": 60,
+      "bottom": 90,
+      "left": 60
+    },
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
+    },
+    "buttonImageIdle": "assets/buttons/button_idle.png",
+    "buttonImageConnecting": "assets/buttons/button_connecting.png",
+    "buttonImageActive": "assets/buttons/button_active.png",
+    "buttonImageError": "assets/buttons/button_error.png",
+    "buttonVideoIdle": "assets/buttons/button_idle.webp",
+    "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
+    "buttonVideoActive": "assets/buttons/button_active.webp",
+    "buttonVideoError": "assets/buttons/button_error.webp"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "bubbles",
+    "particleSprite": "assets/particles/bio_bubble.png",
+    "particleSprites": [
+      "assets/particles/bio_bubble.png",
+      "assets/particles/octo_spark.png",
+      "assets/particles/abyss_crystal.png"
+    ],
+    "intensity": 0.78,
+    "speed": 1.15,
+    "size": 1.15,
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.4,
+    "screenOverlay": "aurora",
+    "trafficGraphStyle": "neon_wave",
+    "buttonLoaderStyle": "dual_arc",
+    "glow": {
+      "intensity": 1.35,
+      "radius": 38,
+      "coreColor": "#00E5FF",
+      "bloomColor": "#8B5CF6"
+    },
+    "statusText": {
+      "disconnected": "КРАКЕН СПИТ НА ДНЕ",
+      "connecting": "ПОГРУЖЕНИЕ В БЕЗДНУ...",
+      "connected": "ЩУПАЛЬЦА OCTOPUS АКТИВНЫ",
+      "error": "ДАВЛЕНИЕ БЕЗДНЫ",
+      "buttonIdle": "ПУСК",
+      "buttonConnecting": "ЛУЧИ",
+      "buttonConnected": "ЩИТ"
+    },
+    "activeOverrides": {
+      "accentColor": "#8B5CF6",
+      "glowColor": "#00E5FF",
+      "particleSpeedMultiplier": 1.7,
+      "screenOverlay": "cyber_hud"
+    }
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "custom_image",
+        "borderGlow": "#00E5FF",
+        "pulseSpeed": 1.1
+      },
+      "sounds": {
+        "click": "assets/sounds/click.wav",
+        "hover": "assets/sounds/hover.wav",
+        "notification": "assets/sounds/notification.wav",
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav",
+        "ambient": "assets/sounds/ambient.wav"
+      }
+    }
+  }
+}

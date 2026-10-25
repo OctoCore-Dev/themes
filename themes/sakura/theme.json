@@ -3,7 +3,7 @@
   "id": "sakura",
   "name": "Sakura Blossom",
   "author": "OctoCore",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Ультра-живая тема: цветущее дерево сакуры, мягкое закатное небо, падающие лепестки, тонкая изящная рамка из цветущих ветвей и японских узелков по периметру экрана, 4 состояния неоновой кнопки сакуры (бутон, вихрь лепестков, цветущая сакура, рубиновая ошибка) и нежный звук японского колокольчика ветра",
   "tags": [
     "anime",
@@ -63,7 +63,9 @@
       "click": "assets/sounds/click.wav",
       "notification": "assets/sounds/chime.wav",
       "connect": "assets/sounds/chime.wav",
-      "disconnect": "assets/sounds/chime.wav"
+      "disconnect": "assets/sounds/chime.wav",
+      "hover": "assets/sounds/hover.wav",
+      "ambient": "assets/sounds/ambient.wav"
     }
   },
   "background": {
@@ -87,7 +89,21 @@
     "buttonVideoIdle": "assets/buttons/button_idle.webp",
     "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
     "buttonVideoActive": "assets/buttons/button_active.webp",
-    "buttonVideoError": "assets/buttons/button_error.webp"
+    "buttonVideoError": "assets/buttons/button_error.webp",
+    "screenFrameMobile": "assets/frames/frame_mobile.png",
+    "frameSliceMobile": {
+      "top": 90,
+      "right": 60,
+      "bottom": 90,
+      "left": 60
+    },
+    "cardFrame": "assets/frames/card_frame.png",
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
+    }
   },
   "layout": {
     "buttonPosition": "center",
@@ -103,7 +119,7 @@
     "interactiveParticles": true,
     "trafficReactive": true,
     "parallaxIntensity": 0.35,
-    "screenOverlay": "none",
+    "screenOverlay": "golden_rays",
     "trafficGraphStyle": "neon_wave",
     "buttonLoaderStyle": "crystal",
     "statusText": {
@@ -118,7 +134,19 @@
     "activeOverrides": {
       "accentColor": "#F472B6",
       "glowColor": "#FB7185",
-      "particleSpeedMultiplier": 1.5
+      "particleSpeedMultiplier": 1.5,
+      "screenOverlay": "aurora"
+    },
+    "particleSprites": [
+      "assets/particles/petal.png",
+      "assets/particles/sakura_star.png",
+      "assets/particles/blossom_orb.png"
+    ],
+    "glow": {
+      "intensity": 1.3,
+      "radius": 36,
+      "coreColor": "#FF94B8",
+      "bloomColor": "#FF699E"
     }
   },
   "apps": {

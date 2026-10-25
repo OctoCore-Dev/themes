@@ -3,7 +3,7 @@
   "id": "halloween-2026",
   "name": "Halloween 2026",
   "author": "OctoCore",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Ультимативная мистическая тема к Хэллоуину 2026: живой видео-фон с клубящимся туманом над готическим замком и мерцанием тыкв, расправляющиеся крылья летучей мыши и пентаграмма призыва на кнопке VPN, кастомный готический хоррор-шрифт Creepster, обсидианово-фиолетовые карточки с тыквенным неоном, адаптивная 9-Slice рамка для ПК и смартфонов, парящие блуждающие огни (Will-o'-the-Wisp) и кинематографичный саундпак с раскатами грома, колокольным набатом и хохотом ведьмы",
   "tags": [
     "halloween",
@@ -70,7 +70,9 @@
       "click": "assets/sounds/click.wav",
       "notification": "assets/sounds/notification.wav",
       "connect": "assets/sounds/connect.wav",
-      "disconnect": "assets/sounds/disconnect.wav"
+      "disconnect": "assets/sounds/disconnect.wav",
+      "hover": "assets/sounds/hover.wav",
+      "ambient": "assets/sounds/ambient.wav"
     }
   },
   "background": {
@@ -130,7 +132,6 @@
     "intensity": 0.75,
     "speed": 1.1,
     "size": 1.2,
-    "color": "#39FF14",
     "interactiveParticles": true,
     "trafficReactive": true,
     "parallaxIntensity": 0.4,
@@ -150,6 +151,12 @@
       "accentColor": "#FF7518",
       "glowColor": "#A855F7",
       "particleSpeedMultiplier": 1.6
+    },
+    "glow": {
+      "intensity": 1.4,
+      "radius": 40,
+      "coreColor": "#FF6B00",
+      "bloomColor": "#39FF14"
     }
   },
   "apps": {

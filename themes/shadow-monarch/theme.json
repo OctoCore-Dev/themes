@@ -1,0 +1,174 @@
+{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "shadow-monarch",
+  "name": "Shadow Monarch",
+  "author": "OctoCore",
+  "version": "1.0.0",
+  "description": "Темная аниме-тема Повелителя Теней в эстетике Solo Leveling: бездна фиолетово-черной маны, восходящие языки теневого пламени и бирюзовые руны призыва, 4 состояния кнопки Врат Монарха («ВОССТАНЬ») и мистический басовый саундпак",
+  "tags": [
+    "anime",
+    "shadow",
+    "monarch",
+    "arise",
+    "purple",
+    "dark",
+    "neon",
+    "live"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#06040D",
+      "BgSurface": "#100B20",
+      "BgElevated": "#191133",
+      "BgInput": "#0B0717",
+      "Primary": "#8B5CF6",
+      "PrimaryBright": "#C084FC",
+      "PrimaryDim": "#5B21B6",
+      "Accent": "#00F5D4",
+      "TextPrimary": "#F5F3FF",
+      "TextSecondary": "#B8A9E0",
+      "TextMuted": "#6B5B95",
+      "SolidBorderDark": "#24164A",
+      "BorderSubtle": "#1B1038",
+      "BorderMedium": "#7C3AED",
+      "Success": "#00F5D4",
+      "Warning": "#F59E0B",
+      "Error": "#F43F5E"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 45,
+        "stops": [
+          "#8B5CF6",
+          "#00F5D4"
+        ]
+      },
+      "SurfaceGradient": {
+        "angle": 135,
+        "stops": [
+          "#1A1036",
+          "#07040F"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 26,
+      "BorderThickness": 1.5,
+      "CardOpacity": 0.84
+    },
+    "sounds": {
+      "click": "assets/sounds/click.wav",
+      "hover": "assets/sounds/hover.wav",
+      "notification": "assets/sounds/notification.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav",
+      "ambient": "assets/sounds/ambient.wav"
+    }
+  },
+  "background": {
+    "type": "video",
+    "videoSource": "assets/bg.mp4",
+    "imageSource": "assets/bg.jpg",
+    "fallbackImage": "assets/bg.jpg",
+    "loop": true,
+    "muted": true,
+    "opacity": 0.45
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/frame.png",
+    "screenFrameMobile": "assets/frames/frame_mobile.png",
+    "cardFrame": "assets/frames/card_frame.png",
+    "frameSlice": {
+      "top": 80,
+      "right": 80,
+      "bottom": 80,
+      "left": 80
+    },
+    "frameSliceMobile": {
+      "top": 90,
+      "right": 60,
+      "bottom": 90,
+      "left": 60
+    },
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
+    },
+    "buttonImageIdle": "assets/buttons/button_idle.png",
+    "buttonImageConnecting": "assets/buttons/button_connecting.png",
+    "buttonImageActive": "assets/buttons/button_active.png",
+    "buttonImageError": "assets/buttons/button_error.png",
+    "buttonVideoIdle": "assets/buttons/button_idle.webp",
+    "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
+    "buttonVideoActive": "assets/buttons/button_active.webp",
+    "buttonVideoError": "assets/buttons/button_error.webp"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "embers",
+    "particleSprite": "assets/particles/shadow_flame.png",
+    "particleSprites": [
+      "assets/particles/shadow_flame.png",
+      "assets/particles/monarch_rune.png",
+      "assets/particles/void_spark.png"
+    ],
+    "intensity": 0.78,
+    "speed": 1.15,
+    "size": 1.15,
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.4,
+    "screenOverlay": "mystic_fog",
+    "trafficGraphStyle": "pulse_line",
+    "buttonLoaderStyle": "runes",
+    "glow": {
+      "intensity": 1.35,
+      "radius": 38,
+      "coreColor": "#8B5CF6",
+      "bloomColor": "#00F5D4"
+    },
+    "statusText": {
+      "disconnected": "ВРАТА ЗАКРЫТЫ",
+      "connecting": "ПРИЗЫВ АРМИИ ТЕНЕЙ...",
+      "connected": "ВЛАСТЬ МОНАРХА АКТИВНА",
+      "error": "МАНА ИСТОЩЕНА",
+      "buttonIdle": "ВОССТАНЬ",
+      "buttonConnecting": "ПРИЗЫВ",
+      "buttonConnected": "МОНАРХ"
+    },
+    "activeOverrides": {
+      "accentColor": "#00F5D4",
+      "glowColor": "#8B5CF6",
+      "particleSpeedMultiplier": 1.7,
+      "screenOverlay": "aurora"
+    }
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "custom_image",
+        "borderGlow": "#8B5CF6",
+        "pulseSpeed": 1.1
+      },
+      "sounds": {
+        "click": "assets/sounds/click.wav",
+        "hover": "assets/sounds/hover.wav",
+        "notification": "assets/sounds/notification.wav",
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav",
+        "ambient": "assets/sounds/ambient.wav"
+      }
+    }
+  }
+}

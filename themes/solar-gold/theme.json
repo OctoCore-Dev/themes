@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "solar-gold",
+  "name": "Imperial Onyx & Gold",
+  "author": "OctoCore",
+  "version": "1.0.0",
+  "description": "Премиальная люксовая тема из черного матового оникса и жидкого золота 999 пробы: золотые солнечные лучи, парящая бриллиантовая пыль, хронометр-турбийон на кнопке VPN, филигранная рамка Ар-Деко и теплый бархатный саундпак",
+  "tags": [
+    "gold",
+    "luxury",
+    "onyx",
+    "black",
+    "vip",
+    "minimal",
+    "elegant",
+    "live"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#090806",
+      "BgSurface": "#14110C",
+      "BgElevated": "#211C13",
+      "BgInput": "#0F0D09",
+      "Primary": "#F59E0B",
+      "PrimaryBright": "#FBBF24",
+      "PrimaryDim": "#B45309",
+      "Accent": "#FDE68A",
+      "TextPrimary": "#FFFBEB",
+      "TextSecondary": "#D6C5A3",
+      "TextMuted": "#85775C",
+      "SolidBorderDark": "#332814",
+      "BorderSubtle": "#261E10",
+      "BorderMedium": "#D97706",
+      "Success": "#10B981",
+      "Warning": "#F59E0B",
+      "Error": "#EF4444"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 45,
+        "stops": [
+          "#FDE68A",
+          "#F59E0B",
+          "#B45309"
+        ]
+      },
+      "SurfaceGradient": {
+        "angle": 135,
+        "stops": [
+          "#241D12",
+          "#0B0906"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 26,
+      "BorderThickness": 1.5,
+      "CardOpacity": 0.84
+    },
+    "sounds": {
+      "click": "assets/sounds/click.wav",
+      "hover": "assets/sounds/hover.wav",
+      "notification": "assets/sounds/notification.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav",
+      "ambient": "assets/sounds/ambient.wav"
+    }
+  },
+  "background": {
+    "type": "video",
+    "videoSource": "assets/bg.mp4",
+    "imageSource": "assets/bg.jpg",
+    "fallbackImage": "assets/bg.jpg",
+    "loop": true,
+    "muted": true,
+    "opacity": 0.45
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/frame.png",
+    "screenFrameMobile": "assets/frames/frame_mobile.png",
+    "cardFrame": "assets/frames/card_frame.png",
+    "frameSlice": {
+      "top": 80,
+      "right": 80,
+      "bottom": 80,
+      "left": 80
+    },
+    "frameSliceMobile": {
+      "top": 90,
+      "right": 60,
+      "bottom": 90,
+      "left": 60
+    },
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
+    },
+    "buttonImageIdle": "assets/buttons/button_idle.png",
+    "buttonImageConnecting": "assets/buttons/button_connecting.png",
+    "buttonImageActive": "assets/buttons/button_active.png",
+    "buttonImageError": "assets/buttons/button_error.png",
+    "buttonVideoIdle": "assets/buttons/button_idle.webp",
+    "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
+    "buttonVideoActive": "assets/buttons/button_active.webp",
+    "buttonVideoError": "assets/buttons/button_error.webp"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "twinkle",
+    "particleSprite": "assets/particles/gold_diamond.png",
+    "particleSprites": [
+      "assets/particles/gold_diamond.png",
+      "assets/particles/champagne_star.png",
+      "assets/particles/amber_hex.png"
+    ],
+    "intensity": 0.78,
+    "speed": 1.15,
+    "size": 1.15,
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.4,
+    "screenOverlay": "golden_rays",
+    "trafficGraphStyle": "aurora_ribbon",
+    "buttonLoaderStyle": "crystal",
+    "glow": {
+      "intensity": 1.35,
+      "radius": 38,
+      "coreColor": "#F59E0B",
+      "bloomColor": "#FDE68A"
+    },
+    "statusText": {
+      "disconnected": "ЛИНИЯ ОЖИДАЕТ",
+      "connecting": "СИНХРОНИЗАЦИЯ КАНАЛА...",
+      "connected": "ПРЕМИУМ ЗАЩИТА АКТИВНА",
+      "error": "СБОЙ СОЕДИНЕНИЯ",
+      "buttonIdle": "СТАРТ",
+      "buttonConnecting": "КАНАЛ",
+      "buttonConnected": "VIP"
+    },
+    "activeOverrides": {
+      "accentColor": "#FDE68A",
+      "glowColor": "#F59E0B",
+      "particleSpeedMultiplier": 1.7,
+      "screenOverlay": "golden_rays"
+    }
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "custom_image",
+        "borderGlow": "#F59E0B",
+        "pulseSpeed": 1.1
+      },
+      "sounds": {
+        "click": "assets/sounds/click.wav",
+        "hover": "assets/sounds/hover.wav",
+        "notification": "assets/sounds/notification.wav",
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav",
+        "ambient": "assets/sounds/ambient.wav"
+      }
+    }
+  }
+}

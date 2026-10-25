@@ -3,7 +3,7 @@
   "id": "russian-winter",
   "name": "Русская Зима",
   "author": "OctoCore",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Сказочная отечественная тема русской зимы: хрустальная морозная ночь, заснеженный русский бор и иней, серебристо-лазурная морозная палитра, 9-Slice рамка с морозными узорами на стекле, 4 фазы кнопки с ледяным кристаллом и метелью, падающие снежинки и звон морозных колокольчиков тройки",
   "tags": [
     "winter",
@@ -66,14 +66,19 @@
       "click": "assets/sounds/click.wav",
       "notification": "assets/sounds/click.wav",
       "connect": "assets/sounds/connect.wav",
-      "disconnect": "assets/sounds/disconnect.wav"
+      "disconnect": "assets/sounds/disconnect.wav",
+      "hover": "assets/sounds/hover.wav",
+      "ambient": "assets/sounds/ambient.wav"
     }
   },
   "background": {
-    "type": "image",
+    "type": "video",
     "imageSource": "assets/bg.jpg",
     "fallbackImage": "assets/bg.jpg",
-    "opacity": 0.45
+    "opacity": 0.45,
+    "videoSource": "assets/bg.mp4",
+    "loop": true,
+    "muted": true
   },
   "decorations": {
     "screenFrame": "assets/frames/winter_frame.png",
@@ -90,7 +95,21 @@
     "buttonVideoIdle": "assets/buttons/button_idle.webp",
     "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
     "buttonVideoActive": "assets/buttons/button_active.webp",
-    "buttonVideoError": "assets/buttons/button_error.webp"
+    "buttonVideoError": "assets/buttons/button_error.webp",
+    "screenFrameMobile": "assets/frames/frame_mobile.png",
+    "frameSliceMobile": {
+      "top": 90,
+      "right": 60,
+      "bottom": 90,
+      "left": 60
+    },
+    "cardFrame": "assets/frames/card_frame.png",
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
+    }
   },
   "layout": {
     "buttonPosition": "center",
@@ -104,7 +123,6 @@
     "intensity": 0.7,
     "speed": 0.8,
     "size": 1.1,
-    "color": "#E0F7FA",
     "interactiveParticles": true,
     "trafficReactive": true,
     "parallaxIntensity": 0.35,
@@ -124,6 +142,17 @@
       "accentColor": "#60A5FA",
       "glowColor": "#93C5FD",
       "particleSpeedMultiplier": 1.6
+    },
+    "particleSprites": [
+      "assets/particles/snowflake.png",
+      "assets/particles/frost_star.png",
+      "assets/particles/ice_crystal.png"
+    ],
+    "glow": {
+      "intensity": 1.3,
+      "radius": 36,
+      "coreColor": "#00B4D8",
+      "bloomColor": "#E0F7FA"
     }
   },
   "apps": {

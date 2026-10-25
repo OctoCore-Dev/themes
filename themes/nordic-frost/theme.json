@@ -3,7 +3,7 @@
   "id": "nordic-frost",
   "name": "Nordic Frost",
   "author": "OctoCore",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Элегантная северная тема: арктическая ночь, лазурный и ледниковый контраст, падающие кристаллы снега, матовое стекло и звон хрустального колокольчика",
   "tags": [
     "nordic",
@@ -64,7 +64,9 @@
       "click": "assets/sounds/click.wav",
       "notification": "assets/sounds/click.wav",
       "connect": "assets/sounds/connect.wav",
-      "disconnect": "assets/sounds/disconnect.wav"
+      "disconnect": "assets/sounds/disconnect.wav",
+      "hover": "assets/sounds/hover.wav",
+      "ambient": "assets/sounds/ambient.wav"
     }
   },
   "background": {
@@ -88,7 +90,21 @@
     "buttonVideoIdle": "assets/buttons/button_idle.webp",
     "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
     "buttonVideoActive": "assets/buttons/button_active.webp",
-    "buttonVideoError": "assets/buttons/button_error.webp"
+    "buttonVideoError": "assets/buttons/button_error.webp",
+    "screenFrameMobile": "assets/frames/frame_mobile.png",
+    "frameSliceMobile": {
+      "top": 90,
+      "right": 60,
+      "bottom": 90,
+      "left": 60
+    },
+    "cardFrame": "assets/frames/card_frame.png",
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
+    }
   },
   "layout": {
     "buttonPosition": "center",
@@ -120,6 +136,17 @@
       "accentColor": "#38BDF8",
       "glowColor": "#7DD3FC",
       "particleSpeedMultiplier": 1.5
+    },
+    "particleSprites": [
+      "assets/particles/snowflake.png",
+      "assets/particles/ice_diamond.png",
+      "assets/particles/aurora_orb.png"
+    ],
+    "glow": {
+      "intensity": 1.25,
+      "radius": 34,
+      "coreColor": "#38BDF8",
+      "bloomColor": "#A5F3FC"
     }
   },
   "apps": {

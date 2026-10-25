@@ -1,13 +1,50 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-10-23T13:44:03.619Z",
-  "totalThemes": 7,
+  "generatedAt": "2026-10-25T23:44:52.889Z",
+  "totalThemes": 12,
   "themes": [
+    {
+      "id": "abyssal-octopus",
+      "name": "Octopus Abyssal",
+      "author": "OctoCore",
+      "version": "1.0.0",
+      "description": "Фирменная флагманская тема Obxodka: биолюминесцентная океаническая бездна, электрическое цианово-фиолетовое свечение Кракена, всплывающие глубинные сферы и искры, 4-фазное энергетическое ядро Осьминога и глубокий гидроакустический саундпак сонара",
+      "tags": [
+        "octopus",
+        "abyss",
+        "ocean",
+        "bioluminescent",
+        "cyan",
+        "purple",
+        "official",
+        "live"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/abyssal-octopus/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/abyssal-octopus/preview.jpg",
+      "primaryColor": "#00E5FF",
+      "backgroundColor": "#040914",
+      "accentColor": "#8B5CF6",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": true,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": true,
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
+      },
+      "updatedAt": "2026-10-25T23:44:52.375Z"
+    },
     {
       "id": "cyber-neon",
       "name": "Cyber Neon 2077",
       "author": "OctoCore",
-      "version": "2.0.1",
+      "version": "2.1.0",
       "description": "Футуристическая неоновая тема: киберпанк-ночь, электро-бирюзовый и неоново-пурпурный контраст, светящееся ядро реактора и искры кибернетической энергии",
       "tags": [
         "cyberpunk",
@@ -37,13 +74,13 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-23T13:44:03.481Z"
+      "updatedAt": "2026-10-25T23:44:52.417Z"
     },
     {
       "id": "halloween-2026",
       "name": "Halloween 2026",
       "author": "OctoCore",
-      "version": "1.0.3",
+      "version": "1.1.0",
       "description": "Ультимативная мистическая тема к Хэллоуину 2026: живой видео-фон с клубящимся туманом над готическим замком и мерцанием тыкв, расправляющиеся крылья летучей мыши и пентаграмма призыва на кнопке VPN, кастомный готический хоррор-шрифт Creepster, обсидианово-фиолетовые карточки с тыквенным неоном, адаптивная 9-Slice рамка для ПК и смартфонов, парящие блуждающие огни (Will-o'-the-Wisp) и кинематографичный саундпак с раскатами грома, колокольным набатом и хохотом ведьмы",
       "tags": [
         "halloween",
@@ -76,13 +113,13 @@
         "hasCustomFont": true,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-23T13:44:03.512Z"
+      "updatedAt": "2026-10-25T23:44:52.489Z"
     },
     {
       "id": "itachi",
       "name": "Itachi Uchiha",
       "author": "OctoCore",
-      "version": "2.0.1",
+      "version": "2.1.0",
       "description": "Легендарная неоново-черная аниме тема Итачи Учиха: кровавая луна, стая воронов с алым контуром чакры справа по контуру экрана, 4 состояния кнопки с эволюцией Шарингана (3 томоэ, вихрь чакры, Мангекё и черное пламя Аматерасу) и таинственный звук японского колокола",
       "tags": [
         "anime",
@@ -113,13 +150,51 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-23T13:44:03.568Z"
+      "updatedAt": "2026-10-25T23:44:52.587Z"
+    },
+    {
+      "id": "matrix-code",
+      "name": "Matrix Digital Rain",
+      "author": "OctoCore",
+      "version": "1.0.0",
+      "description": "Легендарная хакерская тема Матрицы: каскадный изумрудный цифровой дождь кода, терминальный HUD-интерфейс в обсидианово-зеленых тонах, пульсирующее ядро реактора Нео на кнопке VPN, 9-Slice кибер-рамка и синтезированный sci-fi звук мейнфрейма",
+      "tags": [
+        "matrix",
+        "hacker",
+        "cyber",
+        "green",
+        "code",
+        "terminal",
+        "dark",
+        "live",
+        "official"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/matrix-code/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/matrix-code/preview.jpg",
+      "primaryColor": "#00FF66",
+      "backgroundColor": "#030A05",
+      "accentColor": "#39FF14",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": true,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": true,
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
+      },
+      "updatedAt": "2026-10-25T23:44:52.610Z"
     },
     {
       "id": "nordic-frost",
       "name": "Nordic Frost",
       "author": "OctoCore",
-      "version": "2.0.1",
+      "version": "2.1.0",
       "description": "Элегантная северная тема: арктическая ночь, лазурный и ледниковый контраст, падающие кристаллы снега, матовое стекло и звон хрустального колокольчика",
       "tags": [
         "nordic",
@@ -150,13 +225,13 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-23T13:44:03.575Z"
+      "updatedAt": "2026-10-25T23:44:52.643Z"
     },
     {
       "id": "russia",
       "name": "Великая Россия",
       "author": "OctoCore",
-      "version": "3.0.1",
+      "version": "3.1.0",
       "description": "Величественная отечественная тема в парадной красно-золотой гамме Московского Кремля: ночная Красная площадь в праздничном золотом сиянии, парящий флаг и золотой двуглавый орёл, градиентные карточки в царском рубиновом бархате с золотыми контурами, роскошная 9-Slice рамка с русской вязью, золотые угловые стикеры филиграни, 4 фазы кнопки со сменой состояний щита и частицы золотых кремлёвских звёзд",
       "tags": [
         "russia",
@@ -178,7 +253,7 @@
       "accentColor": "#FFD700",
       "features": {
         "hasSounds": true,
-        "hasVideo": false,
+        "hasVideo": true,
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
@@ -187,13 +262,13 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-23T13:44:03.594Z"
+      "updatedAt": "2026-10-25T23:44:52.710Z"
     },
     {
       "id": "russian-winter",
       "name": "Русская Зима",
       "author": "OctoCore",
-      "version": "2.0.1",
+      "version": "2.1.0",
       "description": "Сказочная отечественная тема русской зимы: хрустальная морозная ночь, заснеженный русский бор и иней, серебристо-лазурная морозная палитра, 9-Slice рамка с морозными узорами на стекле, 4 фазы кнопки с ледяным кристаллом и метелью, падающие снежинки и звон морозных колокольчиков тройки",
       "tags": [
         "winter",
@@ -216,7 +291,7 @@
       "accentColor": "#E0F7FA",
       "features": {
         "hasSounds": true,
-        "hasVideo": false,
+        "hasVideo": true,
         "hasFrames": true,
         "hasIdolButton": true,
         "hasButtonVideo": true,
@@ -225,13 +300,13 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-23T13:44:03.606Z"
+      "updatedAt": "2026-10-25T23:44:52.761Z"
     },
     {
       "id": "sakura",
       "name": "Sakura Blossom",
       "author": "OctoCore",
-      "version": "2.0.1",
+      "version": "2.1.0",
       "description": "Ультра-живая тема: цветущее дерево сакуры, мягкое закатное небо, падающие лепестки, тонкая изящная рамка из цветущих ветвей и японских узелков по периметру экрана, 4 состояния неоновой кнопки сакуры (бутон, вихрь лепестков, цветущая сакура, рубиновая ошибка) и нежный звук японского колокольчика ветра",
       "tags": [
         "anime",
@@ -257,11 +332,122 @@
         "hasIdolButton": true,
         "hasButtonVideo": true,
         "hasParticles": true,
-        "hasScreenOverlay": false,
+        "hasScreenOverlay": true,
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-23T13:44:03.619Z"
+      "updatedAt": "2026-10-25T23:44:52.806Z"
+    },
+    {
+      "id": "shadow-monarch",
+      "name": "Shadow Monarch",
+      "author": "OctoCore",
+      "version": "1.0.0",
+      "description": "Темная аниме-тема Повелителя Теней в эстетике Solo Leveling: бездна фиолетово-черной маны, восходящие языки теневого пламени и бирюзовые руны призыва, 4 состояния кнопки Врат Монарха («ВОССТАНЬ») и мистический басовый саундпак",
+      "tags": [
+        "anime",
+        "shadow",
+        "monarch",
+        "arise",
+        "purple",
+        "dark",
+        "neon",
+        "live"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/shadow-monarch/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/shadow-monarch/preview.jpg",
+      "primaryColor": "#8B5CF6",
+      "backgroundColor": "#06040D",
+      "accentColor": "#00F5D4",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": true,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": true,
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
+      },
+      "updatedAt": "2026-10-25T23:44:52.831Z"
+    },
+    {
+      "id": "solar-gold",
+      "name": "Imperial Onyx & Gold",
+      "author": "OctoCore",
+      "version": "1.0.0",
+      "description": "Премиальная люксовая тема из черного матового оникса и жидкого золота 999 пробы: золотые солнечные лучи, парящая бриллиантовая пыль, хронометр-турбийон на кнопке VPN, филигранная рамка Ар-Деко и теплый бархатный саундпак",
+      "tags": [
+        "gold",
+        "luxury",
+        "onyx",
+        "black",
+        "vip",
+        "minimal",
+        "elegant",
+        "live"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/solar-gold/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/solar-gold/preview.jpg",
+      "primaryColor": "#F59E0B",
+      "backgroundColor": "#090806",
+      "accentColor": "#FDE68A",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": true,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": true,
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
+      },
+      "updatedAt": "2026-10-25T23:44:52.852Z"
+    },
+    {
+      "id": "synthwave-retrowave",
+      "name": "Sunset Retrowave 84",
+      "author": "OctoCore",
+      "version": "1.0.0",
+      "description": "Яркая атмосфера ретрофутуризма и Outrun 80-х: закатное неоновое солнце над лазерной сеткой шоссе, горячий пурпурно-бирюзовый контраст, аркадная CRT-рамка, турбо-ядро на кнопке VPN и аналоговые синтезаторные аккорды",
+      "tags": [
+        "synthwave",
+        "retrowave",
+        "outrun",
+        "80s",
+        "neon",
+        "sunset",
+        "cyber",
+        "live"
+      ],
+      "supportedApps": [
+        "*"
+      ],
+      "iconUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/synthwave-retrowave/icon.png",
+      "previewUrl": "https://raw.githubusercontent.com/OctoCore-Dev/themes/main/themes/synthwave-retrowave/preview.jpg",
+      "primaryColor": "#FF007F",
+      "backgroundColor": "#0B0518",
+      "accentColor": "#00F0FF",
+      "features": {
+        "hasSounds": true,
+        "hasVideo": true,
+        "hasFrames": true,
+        "hasIdolButton": true,
+        "hasButtonVideo": true,
+        "hasParticles": true,
+        "hasScreenOverlay": true,
+        "hasCustomFont": false,
+        "hasReactiveVfx": true
+      },
+      "updatedAt": "2026-10-25T23:44:52.888Z"
     }
   ]
 }

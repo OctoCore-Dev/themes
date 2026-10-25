@@ -1,0 +1,175 @@
+{
+  "$schema": "../../schemas/theme.v4.json",
+  "id": "matrix-code",
+  "name": "Matrix Digital Rain",
+  "author": "OctoCore",
+  "version": "1.0.0",
+  "description": "Легендарная хакерская тема Матрицы: каскадный изумрудный цифровой дождь кода, терминальный HUD-интерфейс в обсидианово-зеленых тонах, пульсирующее ядро реактора Нео на кнопке VPN, 9-Slice кибер-рамка и синтезированный sci-fi звук мейнфрейма",
+  "tags": [
+    "matrix",
+    "hacker",
+    "cyber",
+    "green",
+    "code",
+    "terminal",
+    "dark",
+    "live",
+    "official"
+  ],
+  "supportedApps": [
+    "*"
+  ],
+  "core": {
+    "colors": {
+      "BgBase": "#030A05",
+      "BgSurface": "#08160C",
+      "BgElevated": "#0E2414",
+      "BgInput": "#061109",
+      "Primary": "#00FF66",
+      "PrimaryBright": "#66FF99",
+      "PrimaryDim": "#00993D",
+      "Accent": "#39FF14",
+      "TextPrimary": "#E8FFF0",
+      "TextSecondary": "#8CD9A6",
+      "TextMuted": "#467A59",
+      "SolidBorderDark": "#0F331C",
+      "BorderSubtle": "#0C2916",
+      "BorderMedium": "#00CC52",
+      "Success": "#00FF66",
+      "Warning": "#FFB800",
+      "Error": "#FF1744"
+    },
+    "gradients": {
+      "PrimaryGradient": {
+        "angle": 45,
+        "stops": [
+          "#00FF66",
+          "#00993D"
+        ]
+      },
+      "SurfaceGradient": {
+        "angle": 135,
+        "stops": [
+          "#0D2414",
+          "#040C06"
+        ]
+      }
+    },
+    "ui": {
+      "CornerRadius": 16,
+      "BlurIntensity": 26,
+      "BorderThickness": 1.5,
+      "CardOpacity": 0.84
+    },
+    "sounds": {
+      "click": "assets/sounds/click.wav",
+      "hover": "assets/sounds/hover.wav",
+      "notification": "assets/sounds/notification.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav",
+      "ambient": "assets/sounds/ambient.wav"
+    }
+  },
+  "background": {
+    "type": "video",
+    "videoSource": "assets/bg.mp4",
+    "imageSource": "assets/bg.jpg",
+    "fallbackImage": "assets/bg.jpg",
+    "loop": true,
+    "muted": true,
+    "opacity": 0.45
+  },
+  "decorations": {
+    "screenFrame": "assets/frames/frame.png",
+    "screenFrameMobile": "assets/frames/frame_mobile.png",
+    "cardFrame": "assets/frames/card_frame.png",
+    "frameSlice": {
+      "top": 80,
+      "right": 80,
+      "bottom": 80,
+      "left": 80
+    },
+    "frameSliceMobile": {
+      "top": 90,
+      "right": 60,
+      "bottom": 90,
+      "left": 60
+    },
+    "cornerStickers": {
+      "topLeft": "assets/stickers/corner_tl.png",
+      "topRight": "assets/stickers/corner_tr.png",
+      "bottomLeft": "assets/stickers/corner_bl.png",
+      "bottomRight": "assets/stickers/corner_br.png"
+    },
+    "buttonImageIdle": "assets/buttons/button_idle.png",
+    "buttonImageConnecting": "assets/buttons/button_connecting.png",
+    "buttonImageActive": "assets/buttons/button_active.png",
+    "buttonImageError": "assets/buttons/button_error.png",
+    "buttonVideoIdle": "assets/buttons/button_idle.webp",
+    "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
+    "buttonVideoActive": "assets/buttons/button_active.webp",
+    "buttonVideoError": "assets/buttons/button_error.webp"
+  },
+  "layout": {
+    "buttonPosition": "center",
+    "speedWidget": "graph",
+    "serverCardStyle": "glass",
+    "showQuickToggles": true
+  },
+  "vfx": {
+    "particles": "matrix",
+    "particleSprite": "assets/particles/glyph_zero.png",
+    "particleSprites": [
+      "assets/particles/glyph_zero.png",
+      "assets/particles/glyph_one.png",
+      "assets/particles/matrix_spark.png"
+    ],
+    "intensity": 0.78,
+    "speed": 1.15,
+    "size": 1.15,
+    "interactiveParticles": true,
+    "trafficReactive": true,
+    "parallaxIntensity": 0.4,
+    "screenOverlay": "scanlines",
+    "trafficGraphStyle": "cyber_bars",
+    "buttonLoaderStyle": "reactor",
+    "glow": {
+      "intensity": 1.35,
+      "radius": 38,
+      "coreColor": "#00FF66",
+      "bloomColor": "#39FF14"
+    },
+    "statusText": {
+      "disconnected": "МАТРИЦА: ВНЕ СИСТЕМЫ",
+      "connecting": "ВЗЛОМ МЕЙНФРЕЙМА...",
+      "connected": "ВХОД В МАТРИЦУ ВЫПОЛНЕН",
+      "error": "СБОЙ СИГНАЛА СИОНА",
+      "buttonIdle": "ВХОД",
+      "buttonConnecting": "КОД",
+      "buttonConnected": "ОНЛАЙН"
+    },
+    "activeOverrides": {
+      "accentColor": "#39FF14",
+      "glowColor": "#00FF66",
+      "particleSpeedMultiplier": 1.7,
+      "screenOverlay": "cyber_hud"
+    }
+  },
+  "apps": {
+    "obxodka": {
+      "tunnelButton": {
+        "style": "custom_image",
+        "borderGlow": "#00FF66",
+        "pulseSpeed": 1.1
+      },
+      "sounds": {
+        "click": "assets/sounds/click.wav",
+        "hover": "assets/sounds/hover.wav",
+        "notification": "assets/sounds/notification.wav",
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav",
+        "ambient": "assets/sounds/ambient.wav"
+      }
+    }
+  }
+}
