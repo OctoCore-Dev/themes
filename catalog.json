@@ -1,6 +1,6 @@
 {
   "schemaVersion": "4.0.0",
-  "generatedAt": "2026-10-25T23:44:52.889Z",
+  "generatedAt": "2026-10-25T23:53:41.672Z",
   "totalThemes": 12,
   "themes": [
     {
@@ -38,7 +38,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.375Z"
+      "updatedAt": "2026-10-25T23:53:41.471Z"
     },
     {
       "id": "cyber-neon",
@@ -74,7 +74,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.417Z"
+      "updatedAt": "2026-10-25T23:53:41.489Z"
     },
     {
       "id": "halloween-2026",
@@ -113,7 +113,7 @@
         "hasCustomFont": true,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.489Z"
+      "updatedAt": "2026-10-25T23:53:41.515Z"
     },
     {
       "id": "itachi",
@@ -150,7 +150,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.587Z"
+      "updatedAt": "2026-10-25T23:53:41.570Z"
     },
     {
       "id": "matrix-code",
@@ -188,7 +188,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.610Z"
+      "updatedAt": "2026-10-25T23:53:41.579Z"
     },
     {
       "id": "nordic-frost",
@@ -225,7 +225,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.643Z"
+      "updatedAt": "2026-10-25T23:53:41.589Z"
     },
     {
       "id": "russia",
@@ -262,7 +262,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.710Z"
+      "updatedAt": "2026-10-25T23:53:41.610Z"
     },
     {
       "id": "russian-winter",
@@ -300,7 +300,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.761Z"
+      "updatedAt": "2026-10-25T23:53:41.625Z"
     },
     {
       "id": "sakura",
@@ -336,7 +336,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.806Z"
+      "updatedAt": "2026-10-25T23:53:41.641Z"
     },
     {
       "id": "shadow-monarch",
@@ -373,7 +373,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.831Z"
+      "updatedAt": "2026-10-25T23:53:41.651Z"
     },
     {
       "id": "solar-gold",
@@ -410,7 +410,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.852Z"
+      "updatedAt": "2026-10-25T23:53:41.662Z"
     },
     {
       "id": "synthwave-retrowave",
@@ -447,7 +447,7 @@
         "hasCustomFont": false,
         "hasReactiveVfx": true
       },
-      "updatedAt": "2026-10-25T23:44:52.888Z"
+      "updatedAt": "2026-10-25T23:53:41.672Z"
     }
   ]
 }
