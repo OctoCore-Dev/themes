@@ -3,7 +3,7 @@
   "id": "matrix-code",
   "name": "Matrix Digital Rain",
   "author": "OctoCore",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Легендарная хакерская тема Матрицы: каскадный изумрудный цифровой дождь кода, терминальный HUD-интерфейс в обсидианово-зеленых тонах, пульсирующее ядро реактора Нео на кнопке VPN, 9-Slice кибер-рамка и синтезированный sci-fi звук мейнфрейма",
   "tags": [
     "matrix",
@@ -31,20 +31,20 @@
       "Accent": "#39FF14",
       "TextPrimary": "#E8FFF0",
       "TextSecondary": "#8CD9A6",
-      "TextMuted": "#467A59",
+      "TextMuted": "#669E7A",
       "SolidBorderDark": "#0F331C",
       "BorderSubtle": "#0C2916",
       "BorderMedium": "#00CC52",
       "Success": "#00FF66",
       "Warning": "#FFB800",
-      "Error": "#FF1744"
+      "Error": "#FF4D6A"
     },
     "gradients": {
       "PrimaryGradient": {
         "angle": 45,
         "stops": [
           "#00FF66",
-          "#00993D"
+          "#39FF14"
         ]
       },
       "SurfaceGradient": {
@@ -59,7 +59,7 @@
       "CornerRadius": 16,
       "BlurIntensity": 26,
       "BorderThickness": 1.5,
-      "CardOpacity": 0.84
+      "CardOpacity": 0.85
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
@@ -67,7 +67,8 @@
       "notification": "assets/sounds/notification.wav",
       "connect": "assets/sounds/connect.wav",
       "disconnect": "assets/sounds/disconnect.wav",
-      "ambient": "assets/sounds/ambient.wav"
+      "ambient": "assets/sounds/ambient.wav",
+      "volume": 0.85
     }
   },
   "background": {
@@ -84,16 +85,16 @@
     "screenFrameMobile": "assets/frames/frame_mobile.png",
     "cardFrame": "assets/frames/card_frame.png",
     "frameSlice": {
-      "top": 80,
-      "right": 80,
-      "bottom": 80,
-      "left": 80
+      "top": 64,
+      "right": 64,
+      "bottom": 64,
+      "left": 64
     },
     "frameSliceMobile": {
-      "top": 90,
-      "right": 60,
-      "bottom": 90,
-      "left": 60
+      "top": 64,
+      "right": 48,
+      "bottom": 64,
+      "left": 48
     },
     "cornerStickers": {
       "topLeft": "assets/stickers/corner_tl.png",
@@ -108,7 +109,8 @@
     "buttonVideoIdle": "assets/buttons/button_idle.webp",
     "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
     "buttonVideoActive": "assets/buttons/button_active.webp",
-    "buttonVideoError": "assets/buttons/button_error.webp"
+    "buttonVideoError": "assets/buttons/button_error.webp",
+    "buttonRing": "assets/buttons/button_ring.png"
   },
   "layout": {
     "buttonPosition": "center",

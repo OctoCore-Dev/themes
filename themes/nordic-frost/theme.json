@@ -3,7 +3,7 @@
   "id": "nordic-frost",
   "name": "Nordic Frost",
   "author": "OctoCore",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Элегантная северная тема: арктическая ночь, лазурный и ледниковый контраст, падающие кристаллы снега, матовое стекло и звон хрустального колокольчика",
   "tags": [
     "nordic",
@@ -29,8 +29,8 @@
       "PrimaryDim": "#0284C7",
       "Accent": "#A5F3FC",
       "TextPrimary": "#F1F5F9",
-      "TextSecondary": "#94A3B8",
-      "TextMuted": "#475569",
+      "TextSecondary": "#B2CAE0",
+      "TextMuted": "#7E99B5",
       "SolidBorderDark": "#1E3A5F",
       "BorderSubtle": "#1B2B3F",
       "BorderMedium": "#294B73",
@@ -43,7 +43,7 @@
         "angle": 45,
         "stops": [
           "#38BDF8",
-          "#0284C7"
+          "#A5F3FC"
         ]
       },
       "SurfaceGradient": {
@@ -56,17 +56,18 @@
     },
     "ui": {
       "CornerRadius": 16,
-      "BlurIntensity": 25,
+      "BlurIntensity": 26,
       "BorderThickness": 1.5,
       "CardOpacity": 0.85
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/click.wav",
+      "notification": "assets/sounds/notification.wav",
       "connect": "assets/sounds/connect.wav",
       "disconnect": "assets/sounds/disconnect.wav",
       "hover": "assets/sounds/hover.wav",
-      "ambient": "assets/sounds/ambient.wav"
+      "ambient": "assets/sounds/ambient.wav",
+      "volume": 0.85
     }
   },
   "background": {
@@ -78,10 +79,10 @@
   "decorations": {
     "screenFrame": "assets/frames/frost_frame.png",
     "frameSlice": {
-      "top": 75,
-      "right": 75,
-      "bottom": 75,
-      "left": 75
+      "top": 64,
+      "right": 64,
+      "bottom": 64,
+      "left": 64
     },
     "buttonImageIdle": "assets/buttons/btn_idle.png",
     "buttonImageConnecting": "assets/buttons/btn_connecting.png",
@@ -93,10 +94,10 @@
     "buttonVideoError": "assets/buttons/button_error.webp",
     "screenFrameMobile": "assets/frames/frame_mobile.png",
     "frameSliceMobile": {
-      "top": 90,
-      "right": 60,
-      "bottom": 90,
-      "left": 60
+      "top": 64,
+      "right": 48,
+      "bottom": 64,
+      "left": 48
     },
     "cardFrame": "assets/frames/card_frame.png",
     "cornerStickers": {
@@ -104,7 +105,8 @@
       "topRight": "assets/stickers/corner_tr.png",
       "bottomLeft": "assets/stickers/corner_bl.png",
       "bottomRight": "assets/stickers/corner_br.png"
-    }
+    },
+    "buttonRing": "assets/buttons/button_ring.png"
   },
   "layout": {
     "buttonPosition": "center",
@@ -135,7 +137,8 @@
     "activeOverrides": {
       "accentColor": "#38BDF8",
       "glowColor": "#7DD3FC",
-      "particleSpeedMultiplier": 1.5
+      "particleSpeedMultiplier": 1.5,
+      "screenOverlay": "aurora"
     },
     "particleSprites": [
       "assets/particles/snowflake.png",
@@ -147,18 +150,23 @@
       "radius": 34,
       "coreColor": "#38BDF8",
       "bloomColor": "#A5F3FC"
-    }
+    },
+    "size": 1.1
   },
   "apps": {
     "obxodka": {
       "tunnelButton": {
-        "style": "glow_icon",
+        "style": "custom_image",
         "borderGlow": "#38BDF8",
         "pulseSpeed": 1.0
       },
       "sounds": {
+        "click": "assets/sounds/click.wav",
+        "hover": "assets/sounds/hover.wav",
+        "notification": "assets/sounds/notification.wav",
         "connect": "assets/sounds/connect.wav",
-        "disconnect": "assets/sounds/disconnect.wav"
+        "disconnect": "assets/sounds/disconnect.wav",
+        "ambient": "assets/sounds/ambient.wav"
       }
     }
   }

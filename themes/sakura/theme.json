@@ -3,7 +3,7 @@
   "id": "sakura",
   "name": "Sakura Blossom",
   "author": "OctoCore",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Ультра-живая тема: цветущее дерево сакуры, мягкое закатное небо, падающие лепестки, тонкая изящная рамка из цветущих ветвей и японских узелков по периметру экрана, 4 состояния неоновой кнопки сакуры (бутон, вихрь лепестков, цветущая сакура, рубиновая ошибка) и нежный звук японского колокольчика ветра",
   "tags": [
     "anime",
@@ -29,7 +29,7 @@
       "Accent": "#FF699E",
       "TextPrimary": "#FFF0F5",
       "TextSecondary": "#D8B4C8",
-      "TextMuted": "#8F6D80",
+      "TextMuted": "#9C84A3",
       "SolidBorderDark": "#422038",
       "BorderSubtle": "#301729",
       "BorderMedium": "#5E2D4F",
@@ -42,7 +42,7 @@
         "angle": 45,
         "stops": [
           "#FF94B8",
-          "#E65C92"
+          "#FF699E"
         ]
       },
       "SurfaceGradient": {
@@ -55,17 +55,18 @@
     },
     "ui": {
       "CornerRadius": 16,
-      "BlurIntensity": 25,
+      "BlurIntensity": 26,
       "BorderThickness": 1.5,
       "CardOpacity": 0.85
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/chime.wav",
-      "connect": "assets/sounds/chime.wav",
-      "disconnect": "assets/sounds/chime.wav",
+      "notification": "assets/sounds/notification.wav",
+      "connect": "assets/sounds/connect.wav",
+      "disconnect": "assets/sounds/disconnect.wav",
       "hover": "assets/sounds/hover.wav",
-      "ambient": "assets/sounds/ambient.wav"
+      "ambient": "assets/sounds/ambient.wav",
+      "volume": 0.85
     }
   },
   "background": {
@@ -77,10 +78,10 @@
   "decorations": {
     "screenFrame": "assets/frames/branches.png",
     "frameSlice": {
-      "top": 70,
-      "right": 70,
-      "bottom": 70,
-      "left": 70
+      "top": 64,
+      "right": 64,
+      "bottom": 64,
+      "left": 64
     },
     "buttonImageIdle": "assets/buttons/button_idle.png",
     "buttonImageConnecting": "assets/buttons/button_connecting.png",
@@ -92,10 +93,10 @@
     "buttonVideoError": "assets/buttons/button_error.webp",
     "screenFrameMobile": "assets/frames/frame_mobile.png",
     "frameSliceMobile": {
-      "top": 90,
-      "right": 60,
-      "bottom": 90,
-      "left": 60
+      "top": 64,
+      "right": 48,
+      "bottom": 64,
+      "left": 48
     },
     "cardFrame": "assets/frames/card_frame.png",
     "cornerStickers": {
@@ -103,7 +104,8 @@
       "topRight": "assets/stickers/corner_tr.png",
       "bottomLeft": "assets/stickers/corner_bl.png",
       "bottomRight": "assets/stickers/corner_br.png"
-    }
+    },
+    "buttonRing": "assets/buttons/button_ring.png"
   },
   "layout": {
     "buttonPosition": "center",
@@ -147,26 +149,24 @@
       "radius": 36,
       "coreColor": "#FF94B8",
       "bloomColor": "#FF699E"
-    }
+    },
+    "size": 1.1
   },
   "apps": {
     "obxodka": {
       "tunnelButton": {
-        "style": "glow_icon",
+        "style": "custom_image",
         "borderGlow": "#FF94B8",
         "pulseSpeed": 1.0
       },
       "sounds": {
-        "connect": "assets/sounds/chime.wav",
-        "disconnect": "assets/sounds/chime.wav",
-        "click": "assets/sounds/click.wav"
+        "click": "assets/sounds/click.wav",
+        "hover": "assets/sounds/hover.wav",
+        "notification": "assets/sounds/notification.wav",
+        "connect": "assets/sounds/connect.wav",
+        "disconnect": "assets/sounds/disconnect.wav",
+        "ambient": "assets/sounds/ambient.wav"
       }
-    },
-    "maps": {
-      "mapStyle": "sakura-night",
-      "tileUrlTemplate": "https://tiles.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png",
-      "markerAccent": "#FF94B8",
-      "routeColor": "#FF699E"
     }
   }
 }

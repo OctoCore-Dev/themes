@@ -3,7 +3,7 @@
   "id": "abyssal-octopus",
   "name": "Octopus Abyssal",
   "author": "OctoCore",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Фирменная флагманская тема Obxodka: биолюминесцентная океаническая бездна, электрическое цианово-фиолетовое свечение Кракена, всплывающие глубинные сферы и искры, 4-фазное энергетическое ядро Осьминога и глубокий гидроакустический саундпак сонара",
   "tags": [
     "octopus",
@@ -27,23 +27,23 @@
       "Primary": "#00E5FF",
       "PrimaryBright": "#66F0FF",
       "PrimaryDim": "#0099B8",
-      "Accent": "#8B5CF6",
+      "Accent": "#A78BFA",
       "TextPrimary": "#F0F8FF",
       "TextSecondary": "#94B8D8",
-      "TextMuted": "#4F6D8A",
+      "TextMuted": "#7396BA",
       "SolidBorderDark": "#12284C",
       "BorderSubtle": "#0E203D",
       "BorderMedium": "#00B8D4",
       "Success": "#00E676",
       "Warning": "#FFCA28",
-      "Error": "#FF1744"
+      "Error": "#FF4D6A"
     },
     "gradients": {
       "PrimaryGradient": {
         "angle": 45,
         "stops": [
           "#00E5FF",
-          "#8B5CF6"
+          "#A78BFA"
         ]
       },
       "SurfaceGradient": {
@@ -58,7 +58,7 @@
       "CornerRadius": 16,
       "BlurIntensity": 26,
       "BorderThickness": 1.5,
-      "CardOpacity": 0.84
+      "CardOpacity": 0.85
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
@@ -66,7 +66,8 @@
       "notification": "assets/sounds/notification.wav",
       "connect": "assets/sounds/connect.wav",
       "disconnect": "assets/sounds/disconnect.wav",
-      "ambient": "assets/sounds/ambient.wav"
+      "ambient": "assets/sounds/ambient.wav",
+      "volume": 0.85
     }
   },
   "background": {
@@ -83,16 +84,16 @@
     "screenFrameMobile": "assets/frames/frame_mobile.png",
     "cardFrame": "assets/frames/card_frame.png",
     "frameSlice": {
-      "top": 80,
-      "right": 80,
-      "bottom": 80,
-      "left": 80
+      "top": 64,
+      "right": 64,
+      "bottom": 64,
+      "left": 64
     },
     "frameSliceMobile": {
-      "top": 90,
-      "right": 60,
-      "bottom": 90,
-      "left": 60
+      "top": 64,
+      "right": 48,
+      "bottom": 64,
+      "left": 48
     },
     "cornerStickers": {
       "topLeft": "assets/stickers/corner_tl.png",
@@ -107,7 +108,8 @@
     "buttonVideoIdle": "assets/buttons/button_idle.webp",
     "buttonVideoConnecting": "assets/buttons/button_connecting.webp",
     "buttonVideoActive": "assets/buttons/button_active.webp",
-    "buttonVideoError": "assets/buttons/button_error.webp"
+    "buttonVideoError": "assets/buttons/button_error.webp",
+    "buttonRing": "assets/buttons/button_ring.png"
   },
   "layout": {
     "buttonPosition": "center",

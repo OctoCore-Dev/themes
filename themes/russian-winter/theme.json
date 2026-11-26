@@ -3,7 +3,7 @@
   "id": "russian-winter",
   "name": "Русская Зима",
   "author": "OctoCore",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Сказочная отечественная тема русской зимы: хрустальная морозная ночь, заснеженный русский бор и иней, серебристо-лазурная морозная палитра, 9-Slice рамка с морозными узорами на стекле, 4 фазы кнопки с ледяным кристаллом и метелью, падающие снежинки и звон морозных колокольчиков тройки",
   "tags": [
     "winter",
@@ -31,20 +31,20 @@
       "Accent": "#E0F7FA",
       "TextPrimary": "#F0F8FF",
       "TextSecondary": "#A8C5DA",
-      "TextMuted": "#688299",
+      "TextMuted": "#7DA2C2",
       "SolidBorderDark": "#1F3752",
       "BorderSubtle": "#162B42",
       "BorderMedium": "#2C4D73",
       "Success": "#06D6A0",
       "Warning": "#FFD166",
-      "Error": "#EF476F"
+      "Error": "#FF5470"
     },
     "gradients": {
       "PrimaryGradient": {
         "angle": 45,
         "stops": [
           "#00B4D8",
-          "#CAF0F8",
+          "#E0F7FA",
           "#48CAE4"
         ]
       },
@@ -58,17 +58,18 @@
     },
     "ui": {
       "CornerRadius": 16,
-      "BlurIntensity": 28,
-      "BorderThickness": 1.2,
-      "CardOpacity": 0.8
+      "BlurIntensity": 26,
+      "BorderThickness": 1.25,
+      "CardOpacity": 0.85
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/click.wav",
+      "notification": "assets/sounds/notification.wav",
       "connect": "assets/sounds/connect.wav",
       "disconnect": "assets/sounds/disconnect.wav",
       "hover": "assets/sounds/hover.wav",
-      "ambient": "assets/sounds/ambient.wav"
+      "ambient": "assets/sounds/ambient.wav",
+      "volume": 0.85
     }
   },
   "background": {
@@ -83,10 +84,10 @@
   "decorations": {
     "screenFrame": "assets/frames/winter_frame.png",
     "frameSlice": {
-      "top": 80,
-      "right": 80,
-      "bottom": 80,
-      "left": 80
+      "top": 64,
+      "right": 64,
+      "bottom": 64,
+      "left": 64
     },
     "buttonImageIdle": "assets/buttons/button_idle.png",
     "buttonImageConnecting": "assets/buttons/button_connecting.png",
@@ -98,10 +99,10 @@
     "buttonVideoError": "assets/buttons/button_error.webp",
     "screenFrameMobile": "assets/frames/frame_mobile.png",
     "frameSliceMobile": {
-      "top": 90,
-      "right": 60,
-      "bottom": 90,
-      "left": 60
+      "top": 64,
+      "right": 48,
+      "bottom": 64,
+      "left": 48
     },
     "cardFrame": "assets/frames/card_frame.png",
     "cornerStickers": {
@@ -109,7 +110,8 @@
       "topRight": "assets/stickers/corner_tr.png",
       "bottomLeft": "assets/stickers/corner_bl.png",
       "bottomRight": "assets/stickers/corner_br.png"
-    }
+    },
+    "buttonRing": "assets/buttons/button_ring.png"
   },
   "layout": {
     "buttonPosition": "center",
@@ -141,7 +143,8 @@
     "activeOverrides": {
       "accentColor": "#60A5FA",
       "glowColor": "#93C5FD",
-      "particleSpeedMultiplier": 1.6
+      "particleSpeedMultiplier": 1.6,
+      "screenOverlay": "aurora"
     },
     "particleSprites": [
       "assets/particles/snowflake.png",
@@ -158,13 +161,17 @@
   "apps": {
     "obxodka": {
       "tunnelButton": {
-        "style": "glow_icon",
+        "style": "custom_image",
         "borderGlow": "#00B4D8",
         "pulseSpeed": 1.0
       },
       "sounds": {
+        "click": "assets/sounds/click.wav",
+        "hover": "assets/sounds/hover.wav",
+        "notification": "assets/sounds/notification.wav",
         "connect": "assets/sounds/connect.wav",
-        "disconnect": "assets/sounds/disconnect.wav"
+        "disconnect": "assets/sounds/disconnect.wav",
+        "ambient": "assets/sounds/ambient.wav"
       }
     }
   }

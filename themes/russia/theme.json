@@ -3,7 +3,7 @@
   "id": "russia",
   "name": "Великая Россия",
   "author": "OctoCore",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "Величественная отечественная тема в парадной красно-золотой гамме Московского Кремля: ночная Красная площадь в праздничном золотом сиянии, парящий флаг и золотой двуглавый орёл, градиентные карточки в царском рубиновом бархате с золотыми контурами, роскошная 9-Slice рамка с русской вязью, золотые угловые стикеры филиграни, 4 фазы кнопки со сменой состояний щита и частицы золотых кремлёвских звёзд",
   "tags": [
     "russia",
@@ -24,8 +24,8 @@
       "BgSurface": "#1C0D15",
       "BgElevated": "#2A1421",
       "BgInput": "#150A10",
-      "Primary": "#D90429",
-      "PrimaryBright": "#FF2E54",
+      "Primary": "#F43655",
+      "PrimaryBright": "#FF6B84",
       "PrimaryDim": "#8F021A",
       "Accent": "#FFD700",
       "TextPrimary": "#FFFFFF",
@@ -36,14 +36,14 @@
       "BorderMedium": "#FFD700",
       "Success": "#10B981",
       "Warning": "#FFB703",
-      "Error": "#D90429"
+      "Error": "#FF4766"
     },
     "gradients": {
       "PrimaryGradient": {
         "angle": 90,
         "stops": [
+          "#F43655",
           "#FFD700",
-          "#FF3B5C",
           "#D90429"
         ]
       },
@@ -58,17 +58,18 @@
     },
     "ui": {
       "CornerRadius": 16,
-      "BlurIntensity": 25,
+      "BlurIntensity": 26,
       "BorderThickness": 1.5,
-      "CardOpacity": 0.88
+      "CardOpacity": 0.85
     },
     "sounds": {
       "click": "assets/sounds/click.wav",
-      "notification": "assets/sounds/click.wav",
+      "notification": "assets/sounds/notification.wav",
       "connect": "assets/sounds/connect.wav",
       "disconnect": "assets/sounds/disconnect.wav",
       "hover": "assets/sounds/hover.wav",
-      "ambient": "assets/sounds/ambient.wav"
+      "ambient": "assets/sounds/ambient.wav",
+      "volume": 0.85
     }
   },
   "background": {
@@ -84,10 +85,10 @@
     "screenFrame": "assets/frames/russia_frame.png",
     "cardFrame": "assets/frames/card_frame.png",
     "frameSlice": {
-      "top": 130,
-      "right": 130,
-      "bottom": 130,
-      "left": 130
+      "top": 64,
+      "right": 64,
+      "bottom": 64,
+      "left": 64
     },
     "cornerStickers": {
       "topLeft": "assets/stickers/corner_tl.png",
@@ -105,11 +106,12 @@
     "buttonVideoError": "assets/buttons/button_error.webp",
     "screenFrameMobile": "assets/frames/frame_mobile.png",
     "frameSliceMobile": {
-      "top": 90,
-      "right": 60,
-      "bottom": 90,
-      "left": 60
-    }
+      "top": 64,
+      "right": 48,
+      "bottom": 64,
+      "left": 48
+    },
+    "buttonRing": "assets/buttons/button_ring.png"
   },
   "layout": {
     "buttonPosition": "center",
@@ -141,7 +143,8 @@
     "activeOverrides": {
       "accentColor": "#FFD700",
       "glowColor": "#E63946",
-      "particleSpeedMultiplier": 1.4
+      "particleSpeedMultiplier": 1.4,
+      "screenOverlay": "golden_rays"
     },
     "particleSprites": [
       "assets/particles/gold_star.png",
@@ -158,11 +161,16 @@
   "apps": {
     "obxodka": {
       "tunnelButton": {
-        "style": "custom_image"
+        "style": "custom_image",
+        "borderGlow": "#F43655"
       },
       "sounds": {
+        "click": "assets/sounds/click.wav",
+        "hover": "assets/sounds/hover.wav",
+        "notification": "assets/sounds/notification.wav",
         "connect": "assets/sounds/connect.wav",
-        "disconnect": "assets/sounds/disconnect.wav"
+        "disconnect": "assets/sounds/disconnect.wav",
+        "ambient": "assets/sounds/ambient.wav"
       }
     }
   }
